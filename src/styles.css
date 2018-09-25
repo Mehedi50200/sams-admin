@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+	 background-image: linear-gradient(to right, #f0f2f4,#d1d2d3);
+}
+
+body::-webkit-scrollbar { width:0 !important; }

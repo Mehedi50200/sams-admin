@@ -1,0 +1,126 @@
+input[type=email] , input[type=password] {
+    border: none;
+    border-bottom: 1px solid #526170;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 15px;
+    background: transparent;
+    color: #5B86E5;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0px 50px rgba(0, 0, 0, 0.5);
+}
+
+input[type=submit]{
+    border: none;
+    background-image: linear-gradient(to right, #36D1DC,#5B86E5);
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 15px;
+    border-radius: 15px;
+    color: white;
+}
+
+input[type=email]:focus{
+   outline: none;
+   border-bottom: 1px solid #36D1DC;
+}
+
+input[type=password]:focus{
+   outline: none;
+   border-bottom: 1px solid #36D1DC;
+}
+
+input[type=submit]:focus{
+   outline: none;
+   box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type=submit]:hover{
+   box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+button{
+    border: solid .5px #36D1DC; 
+    background-color: transparent;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 25px;
+    border-radius: 15px;
+    color: white;
+}
+
+form{
+	margin-top: 50px;
+	margin-bottom: 50px; 
+}
+
+#p1{
+	text-align: center;
+	color: white;
+	margin-top: 30px;
+	font-size: 19px;
+}
+
+#p2{
+	text-align: center;
+	color: white;
+	margin-top: 50px;
+	font-size: 15px;
+	font-style: italic;
+}
+
+
+.col-md-6{
+ 	box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.3);
+ 	min-height: 200px;
+ }
+
+.col-md-10{
+	margin: auto;
+}
+
+
+#login-form{
+	margin: auto;
+	margin-top: 5%;
+}
+
+#login-imagebox{
+	background-image: linear-gradient(#36D1DC,#5B86E5);
+	border-radius: 8px 0px 0px 8px;
+}
+
+#login-formbox{
+	background-image: linear-gradient(#384b62, #212d3e); 
+	border-radius: 0px 8px 8px 0px;
+}
+
+ #login-formbox img{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle
+ }
+
+ #login-imagebox img{
+    width: 100%;
+    padding: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle
+}
+
+
+
+
+
+
+
