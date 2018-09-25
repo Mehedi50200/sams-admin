@@ -51,6 +51,10 @@ button{
     color: white;
 }
 
+button:hover{
+   box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
 form{
 	margin-top: 50px;
 	margin-bottom: 50px; 
@@ -84,7 +88,7 @@ form{
 
 #login-form{
 	margin: auto;
-	margin-top: 5%;
+	margin-top: 10%;
 }
 
 #login-imagebox{
