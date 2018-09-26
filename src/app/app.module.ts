@@ -10,6 +10,9 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LecturerComponent } from './lecturer/lecturer.component';
+import { CourseComponent } from './course/course.component';
+import { StudentComponent } from './student/student.component';
 
 
 @NgModule({
@@ -18,7 +21,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    LecturerComponent,
+    CourseComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,
