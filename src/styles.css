@@ -1,10 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-	background: linear-gradient(to left, #6A6A6A,#515151);
+    background: linear-gradient(to left, #6A6A6A,#515151);
 }
 
 body::-webkit-scrollbar { width:0 !important; }
-
 
 /*
  * Keyframes
@@ -103,9 +102,10 @@ body::-webkit-scrollbar { width:0 !important; }
     border-image-slice: 1;
     background: #232323; 
 }
+
 /* logo in header(mobile version) and side-nav (tablet & desktop) */
 .pagetitle {
-    font-weight: 600;
+    font-weight: 700;
     padding: 5px;
     text-align: center;
     color: white;
@@ -131,10 +131,12 @@ body::-webkit-scrollbar { width:0 !important; }
 .logo  i {
     font-size: 22px;
 }
+
 .logo span {
     margin-left: 5px;
     text-transform: uppercase;
 }
+
 .side-nav {
     position: absolute;
     width: 100%;
@@ -142,6 +144,7 @@ body::-webkit-scrollbar { width:0 !important; }
     background: #434343;
     z-index: 1;
     display: none;
+    float: left;
 }
 .side-nav.visible {
     display: block;
@@ -188,8 +191,6 @@ ul li:hover{
 /* main content styles */
 .main-content {
     padding: 40px;
-    margin-top: 0;
-    padding: 0;
     padding-top: 80px;
     height: 100%;
 }
@@ -202,6 +203,49 @@ ul li:hover{
     color: white;
     text-align: center;
 }
+
+
+.widget1 {
+    flex-basis: 300px;
+    flex-grow: 10;
+    height: 200px;
+    margin: 1%;
+    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    background: linear-gradient(to left, #3CD3AD, #4CB8C4); 
+    position: relative;
+}
+
+.widget2 {
+    flex-basis: 300px;
+    flex-grow: 10;
+    height: 200px;
+    margin: 1%;
+    border-radius: 6px;
+    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to left, #EB3349, #F45C43); 
+    position: relative;
+}
+
+.widget3 {
+    flex-basis: 300px;
+    flex-grow: 10;
+    height: 200px;
+    margin: 1%;
+    border-radius: 6px;
+    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to left, #CAC531, #ffa751); 
+    position: relative;
+}
+
+.widget1 img, .widget2 img, .widget3 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    margin-top: 20px;
+}
+
 
 
 /* set element styles to fit tablet and higher(desktop) */
@@ -234,6 +278,7 @@ ul li:hover{
         font-size: 20px;
         padding: 20px;
     }
+
 }
 /* set element styles for desktop */
 @media screen and (min-width: 800px) {
@@ -258,82 +303,76 @@ ul li:hover{
     .main-content {
         margin-left: 200px;
     }
+
+    .widget1 {
+        flex-basis: 300px;
+        flex-grow: 10;
+        height: 260px;
+        margin: 1%;
+        box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
+        border-radius: 6px;
+        background: linear-gradient(to left, #3CD3AD, #4CB8C4); 
+        position: relative;
+    }
+
+    .widget2 {
+        flex-basis: 300px;
+        flex-grow: 10;
+        height: 260px;
+        margin: 1%;
+        box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
+        border-radius: 6px;
+        background: linear-gradient(to left, #EB3349, #F45C43); 
+        position: relative;
+    }
+
+    .widget3 {
+        flex-basis: 300px;
+        flex-grow: 10;
+        height: 260px;
+        margin: 1%;
+        box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
+        border-radius: 6px;
+        background: linear-gradient(to left, #CAC531, #ffa751); 
+        position: relative;
+    }
+
+    .widget1 img, .widget2 img, .widget3 img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 250px;
+        margin-top: 20px;
+    }
+
 }
 
 /* main box container */
 .main {
-    display: flex;
+    margin: 1%;
+    display: flex;    
     flex-flow: row wrap;
-}
-.widget1 {
-    flex-basis: 300px;
-    flex-grow: 10;
-    height: 300px;
-    margin: 15px;
-    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
-    border-radius: 6px;
-    background: linear-gradient(to left, #3CD3AD, #4CB8C4); 
-    position: relative;
-}
-
-.widget2 {
-    flex-basis: 300px;
-    flex-grow: 10;
-    height: 300px;
-    margin: 15px;
-    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
-    border-radius: 6px;
-    background: linear-gradient(to left, #EB3349, #F45C43); 
-    position: relative;
-}
-
-.widget3 {
-    flex-basis: 300px;
-    flex-grow: 10;
-    height: 300px;
-    margin: 15px;
-    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
-    border-radius: 6px;
-    background: linear-gradient(to left, #CAC531, #ffa751); 
-    position: relative;
-}
-
-.widget1 img, .widget2 img, .widget3 img {
-    height: 150px;
-    margin-top: 20px;
 }
 
 .widget1:hover img, .widget2:hover img, .widget3:hover img {
-    height: 180px;
-    margin-top: 20px;
-}
+        transform: scale(1.2); 
+    }
 
 .widget1:hover{
-    flex-basis: 305px;
-    height: 305px;
-    margin: 15px;
     box-shadow: -1px 1px 30px 5px rgba(60, 211, 173, 0.6);
     font-weight: 700;
 }
 
 .widget2:hover{
-    flex-basis: 305px;
-    height: 305px;
-    margin: 15px;
     box-shadow: -1px 1px 30px 5px rgba(235, 51, 73, 0.6);
     font-weight: 700;
 }
 
 .widget3:hover{
-    flex-basis: 305px;
-    height: 305px;
-    margin: 15px;
     box-shadow: -1px 1px 30px 5px rgba(202, 197, 49, .6);
     font-weight: 700;
 }
 
-
-
- .widget1:hover .title, .widget2:hover .title, .widget3:hover .title{
+.widget1:hover .title, .widget2:hover .title, .widget3:hover .title{
     font-weight: 700;
 }
