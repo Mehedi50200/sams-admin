@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
 
 import { appRoutes } from './app.routes';
 import { RouterModule } from '@angular/router';
@@ -29,7 +31,9 @@ import { StudentComponent } from './student/student.component';
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
-    RouterModule.forRoot(appRoutes, {useHash: false})    
+    RouterModule.forRoot(appRoutes, {useHash: false}),
+    AngularFireModule.initializeApp(environment.firebase, 'StudentAttendanceMonitoringSystemFrontend')
+
   ],
   providers: [],
   bootstrap: [AppComponent]
