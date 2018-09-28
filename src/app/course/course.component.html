@@ -1,3 +1,53 @@
-<p>
-  course works!
-</p>
+<div class="header">
+	<div class="pagetitle">
+		Home
+	</div>
+</div>
+<div class="side-nav">
+	<div class="logo">
+		<img src ="../../assets/image/logo.png">	
+		<span>SAMS Admin</span>
+	</div>
+	<nav>
+		<ul>
+			<li class="active">
+				<a href="#">
+					<span><img src ="../../assets/image/ihomeactive.png"></span> &nbsp; 
+					<span style="color:#3CD3AD;">Home</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span><img src ="../../assets/image/ilecturer.png"></span> &nbsp;
+					<span>Lecturer</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span><img src ="../../assets/image/icourse.png"></span> &nbsp;
+					<span>Course</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span><img src ="../../assets/image/istudent.png"></span>&nbsp;
+					<span>Student</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span><img src ="../../assets/image/ilogout.png"></span>&nbsp;
+					<span>Logout</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</div>
+<div class="main-content">	
+	<div class="main">
+		<div class="coursewidget scene_element scene_element--fadeinleft" *ngFor="let course of courses | async">			
+			<div class="title"> <span style="font-weight:400;">{{ course.CourseCode }}</span> &nbsp; <span>{{ course.CourseName }}</span></div>
+			<img src ="{{course.Url}}">
+		</div>
+	</div>
+</div>

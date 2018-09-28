@@ -1,11 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AngularFireModule } from '@angular/fire';
-import { environment } from '../environments/environment';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { appRoutes } from './app.routes';
 import { RouterModule } from '@angular/router';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+
+import { environment } from '../environments/environment';
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule} from '@angular/fire/database';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -15,6 +22,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LecturerComponent } from './lecturer/lecturer.component';
 import { CourseComponent } from './course/course.component';
 import { StudentComponent } from './student/student.component';
+
+import {CourseService} from './services/course.service';
 
 
 @NgModule({
@@ -26,16 +35,20 @@ import { StudentComponent } from './student/student.component';
     DashboardComponent,
     LecturerComponent,
     CourseComponent,
-    StudentComponent
+    StudentComponent,   
   ],
+
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes, {useHash: false}),
-    AngularFireModule.initializeApp(environment.firebase, 'StudentAttendanceMonitoringSystemFrontend')
+    AngularFireModule.initializeApp(environment.firebase, 'StudentAttendanceMonitoringSystemFrontend'),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFireStorageModule   
 
   ],
-  providers: [],
+  providers: [CourseService],
   bootstrap: [AppComponent]
 })
 

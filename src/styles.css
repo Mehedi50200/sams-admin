@@ -212,7 +212,8 @@ ul li:hover{
     margin: 1%;
     box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
     border-radius: 6px;
-    background: linear-gradient(to left, #3CD3AD, #4CB8C4); 
+    background: linear-gradient(to left, #EB3349, #F45C43); 
+     
     position: relative;
 }
 
@@ -223,7 +224,7 @@ ul li:hover{
     margin: 1%;
     border-radius: 6px;
     box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(to left, #EB3349, #F45C43); 
+    background: linear-gradient(to left, #3CD3AD, #4CB8C4); 
     position: relative;
 }
 
@@ -245,6 +246,28 @@ ul li:hover{
     width: 200px;
     margin-top: 20px;
 }
+
+
+.coursewidget {
+    flex-basis: 300px;
+    flex-grow: 10;
+    height: 200px;
+    margin: 1%;
+    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    background: linear-gradient(to left, #3CD3AD, #4CB8C4); 
+    position: relative;
+}
+
+.coursewidget img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+    margin-top: 10px;
+}
+
+
 
 
 
@@ -311,7 +334,7 @@ ul li:hover{
         margin: 1%;
         box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
         border-radius: 6px;
-        background: linear-gradient(to left, #3CD3AD, #4CB8C4); 
+        background: linear-gradient(to left, #EB3349, #F45C43); 
         position: relative;
     }
 
@@ -322,7 +345,7 @@ ul li:hover{
         margin: 1%;
         box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
         border-radius: 6px;
-        background: linear-gradient(to left, #EB3349, #F45C43); 
+        background: linear-gradient(to left, #3CD3AD, #4CB8C4);         
         position: relative;
     }
 
@@ -344,6 +367,26 @@ ul li:hover{
         width: 250px;
         margin-top: 20px;
     }
+
+    .coursewidget {
+        flex-basis: 300px;
+        flex-grow: 10;
+        height: 260px;
+        margin: 1%;
+        box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
+        border-radius: 6px;
+        background: linear-gradient(to left, #3CD3AD, #4CB8C4); 
+        position: relative;
+    }
+
+    .coursewidget img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+        margin-top: 20px;
+    }
+
 
 }
 
