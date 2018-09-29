@@ -1,53 +1,49 @@
-<div class="header">
-	<div class="pagetitle">
-		Home
-	</div>
+<div class="bodycontainer">
+  <div class ="main">
+
+
+    <div class="addwidget scene_element scene_element--fadeinright" data-toggle="collapse" data-target="#collapsableForm" aria-expanded="false" aria-controls="collapsableForm">
+    <div class ="titlecontainer">
+        <p>Add New Course</p>
+    </div>
+        <img src ="../../assets/image/add.png">
+    </div>
+
+    <div class="collapse scene_element scene_element--fadein" id="collapsableForm">      
+          <form>         
+            <div class="form-group">                 
+                <input type="text" class="form-control" id="coursecode" placeholder="Course Code">
+            </div> 
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="coursename" placeholder="Course Name">
+            </div>
+
+              <div class="form-group">
+                <input type="text" class="form-control" id="credit" placeholder="Credit">
+            </div>
+              
+            <div class="input-group">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+                <label class="custom-file-label" for="inputGroupFile04">Choose image</label>
+              </div>
+              <div class="input-group-append">
+                <button class="addbtn" type="button" id="inputGroupFileAddon04">Add Course</button>
+              </div>
+            </div>
+          </form>
+      </div>
+
+	  <div class="coursewidget scene_element scene_element--fadeinleft" *ngFor="let course of courses | async">
+      <div class ="titlecontainer">
+        <div class="title"> <span style="font-weight:600;">{{ course.CourseCode }}</span> &nbsp; <span>{{ course.CourseName }}</span></div>
+        <div class="title"> <span style="font-weight:600;">Credit</span> &nbsp; <span>{{ course.CourseCredit }}</span></div>
+      </div>
+		
+		  <img src ="{{course.Url}}">
+	  </div>
+
+  </div>
 </div>
-<div class="side-nav">
-	<div class="logo">
-		<img src ="../../assets/image/logo.png">	
-		<span>SAMS Admin</span>
-	</div>
-	<nav>
-		<ul>
-			<li class="active">
-				<a href="#">
-					<span><img src ="../../assets/image/ihomeactive.png"></span> &nbsp; 
-					<span style="color:#3CD3AD;">Home</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span><img src ="../../assets/image/ilecturer.png"></span> &nbsp;
-					<span>Lecturer</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span><img src ="../../assets/image/icourse.png"></span> &nbsp;
-					<span>Course</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span><img src ="../../assets/image/istudent.png"></span>&nbsp;
-					<span>Student</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span><img src ="../../assets/image/ilogout.png"></span>&nbsp;
-					<span>Logout</span>
-				</a>
-			</li>
-		</ul>
-	</nav>
-</div>
-<div class="main-content">	
-	<div class="main">
-		<div class="coursewidget scene_element scene_element--fadeinleft" *ngFor="let course of courses | async">			
-			<div class="title"> <span style="font-weight:400;">{{ course.CourseCode }}</span> &nbsp; <span>{{ course.CourseName }}</span></div>
-			<img src ="{{course.Url}}">
-		</div>
-	</div>
-</div>
+

@@ -1,0 +1,14 @@
+$(".v1").unbind('click').click(function() {
+  $(this).toggleClass('open');
+  $(this).next().stop().animate({
+    height: "toggle",
+    opacity: "toggle"
+  }, "slow");
+});
+$(".v2 div").unbind('click').click(function() {
+  $(this).toggleClass('close');
+  $(this).parent().next().stop().animate({
+    height: "toggle",
+    opacity: "toggle"
+  }, "slow");
+});

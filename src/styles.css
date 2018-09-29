@@ -1,9 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background: linear-gradient(to left, #6A6A6A,#515151);
+    background: linear-gradient(to left, #efefef,#e5e6e8);
 }
 
 body::-webkit-scrollbar { width:0 !important; }
+
+.bodycontainer{
+  padding-left:10%;
+  padding-right:10%;
+
+}
 
 /*
  * Keyframes
@@ -68,7 +74,7 @@ body::-webkit-scrollbar { width:0 !important; }
 
   /** An element that fades in */
   .scene_element--fadein {
-    animation-duration: 1s;
+    animation-duration: 3s;
     animation-name: fadeIn;
   }
 
@@ -92,154 +98,49 @@ body::-webkit-scrollbar { width:0 !important; }
 
 /*-----------------------Dashboard, Course, Others --------------*/
 
-.header {
-    position: absolute;
-    width: 100%;
-    height: 80px;
-    z-index: 10px;
-    border-bottom: 3px solid #00F4CB;
-    border-image: linear-gradient(to left,  #FFD500 0%, #00F4CB 100%);
-    border-image-slice: 1;
-    background: #232323; 
-}
 
-/* logo in header(mobile version) and side-nav (tablet & desktop) */
-.pagetitle {
-    font-weight: 700;
-    padding: 5px;
-    text-align: center;
-    color: white;
-    font-size: 12px;
-}
-
-.logo {
-    height: 80px;
-    padding: 10px;
-    font-weight: 700;
-}
-
-.logo img {
-    width: 60px;
-}
-
-.side-nav .logo {
-    color: #fff;
-    border-bottom: 3px solid #00F4CB;
-    background: #232323;
-}
-
-.logo  i {
-    font-size: 22px;
-}
-
-.logo span {
-    margin-left: 5px;
-    text-transform: uppercase;
-}
-
-.side-nav {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #434343;
-    z-index: 1;
-    display: none;
-    float: left;
-}
-.side-nav.visible {
-    display: block;
-}
-.side-nav ul {
-    margin: 0;
-    padding: 0;
-}
-.side-nav ul li {
-    padding: 20px 20px;
-    border-bottom: 1px solid #6E6E6E;
-    position: relative;
-}
-
-nav img{
-    height: 30px;
-}
-
-ul li:hover{
-    content: '';
-    position: relative;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to left, #6A6A6A,#515151); 
-}
-
-.side-nav ul li a {
-    color: #fff;
-    display: block;
-    text-decoration: none;
-}
-.side-nav ul li i {
-    color: #0497df;
-    min-width: 20px;
-    text-align: center;
-}
-.side-nav ul li span:nth-child(2) {
-    margin-left: 10px;
-    font-size: 14px;
-    font-weight: 600;
-}
 /* main content styles */
-.main-content {
-    padding: 40px;
-    padding-top: 80px;
-    height: 100%;
-}
 
-.main-content .title {
-    padding: 20px 20px;
-    font-weight: 200;
-    color: #333;
-    font-size: 25px;
-    color: white;
-    text-align: center;
+
+button : focus{
+  outline:0 !important;
 }
 
 
-.widget1 {
+.redgradientwidget {
     flex-basis: 300px;
     flex-grow: 10;
     height: 200px;
     margin: 1%;
-    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
-    background: linear-gradient(to left, #EB3349, #F45C43); 
-     
+    background: linear-gradient(to left, #EB3349, #F45C43);      
     position: relative;
 }
 
-.widget2 {
+.bluegradientwidget {
     flex-basis: 300px;
     flex-grow: 10;
     height: 200px;
     margin: 1%;
     border-radius: 6px;
-    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
     background: linear-gradient(to left, #3CD3AD, #4CB8C4); 
     position: relative;
 }
 
-.widget3 {
+.yellowgradientwidget {
     flex-basis: 300px;
     flex-grow: 10;
     height: 200px;
     margin: 1%;
     border-radius: 6px;
-    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(to left, #CAC531, #ffa751); 
+    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to left, #ffc522, #ffa751); 
     position: relative;
 }
 
-.widget1 img, .widget2 img, .widget3 img {
+.redgradientwidget img, .bluegradientwidget img, .yellowgradientwidget img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -247,175 +148,167 @@ ul li:hover{
     margin-top: 20px;
 }
 
+.addwidget{
+    flex-basis: 300px;
+    flex-grow: 10;
+    height: 260px;
+    margin: 1%;
+    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    background: #ffff;    
+    position: relative;
+}
+
 
 .coursewidget {
     flex-basis: 300px;
     flex-grow: 10;
-    height: 200px;
+    height: 260px;
     margin: 1%;
-    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
     background: linear-gradient(to left, #3CD3AD, #4CB8C4); 
     position: relative;
 }
 
-.coursewidget img{
+.coursewidget img, .addwidget img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 80px;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 
-
-
-
-/* set element styles to fit tablet and higher(desktop) */
-@media screen and (min-width: 600px) {
-    .side-nav {
-        display: block;
-        width: 70px;
-        z-index: 2;
-    }
-    .side-nav ul li span:nth-child(2) {
-        display: none;
-    }
-    .side-nav .logo i {
-        padding-left: 12px;
-    }
-    .side-nav .logo span {
-        display: none;
-    }
-    .side-nav ul li i {
-        font-size: 26px;
-    }
-    .side-nav ul li a {
-        text-align: center;
-    }
-    .main-content {
-        margin-left: 70px;
-    }
-
-    .pagetitle{
-        font-size: 20px;
-        padding: 20px;
-    }
-
-}
 /* set element styles for desktop */
 @media screen and (min-width: 800px) {
-    .side-nav {
-        width: 200px;
-    }
-    .side-nav ul li span:nth-child(2) {
-        display: inline-block;
-    }
-    .side-nav ul li i {
-        font-size: 16px;
-    }
-    .side-nav ul li a {
-        text-align: left;
-    }
-    .side-nav .logo i {
-        padding-left: 0;
-    }
-    .side-nav .logo span {
-        display: inline-block;
-    }
-    .main-content {
-        margin-left: 200px;
-    }
-
-    .widget1 {
+    
+    .redgradientwidget {
         flex-basis: 300px;
         flex-grow: 10;
         height: 260px;
         margin: 1%;
-        box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
         border-radius: 6px;
         background: linear-gradient(to left, #EB3349, #F45C43); 
         position: relative;
     }
 
-    .widget2 {
+    .bluegradientwidget {
         flex-basis: 300px;
         flex-grow: 10;
         height: 260px;
         margin: 1%;
-        box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
         border-radius: 6px;
         background: linear-gradient(to left, #3CD3AD, #4CB8C4);         
         position: relative;
     }
 
-    .widget3 {
+    .yellowgradientwidget {
         flex-basis: 300px;
         flex-grow: 10;
         height: 260px;
         margin: 1%;
-        box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
         border-radius: 6px;
-        background: linear-gradient(to left, #CAC531, #ffa751); 
+        background: linear-gradient(to left, #ffc522, #ffa751); 
         position: relative;
     }
 
-    .widget1 img, .widget2 img, .widget3 img {
+    .redgradientwidget img, .bluegradientwidget img, .yellowgradientwidget img {
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 250px;
-        margin-top: 20px;
+        margin-top: 40px;
     }
-
-    .coursewidget {
-        flex-basis: 300px;
-        flex-grow: 10;
-        height: 260px;
-        margin: 1%;
-        box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.5);
-        border-radius: 6px;
-        background: linear-gradient(to left, #3CD3AD, #4CB8C4); 
-        position: relative;
-    }
-
+   
     .coursewidget img {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 100px;
+        width: 120px;
         margin-top: 20px;
     }
 
+    .addwidget img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 120px;
+        margin-top: 20px;
+    }
 
 }
 
 /* main box container */
+
 .main {
-    margin: 1%;
     display: flex;    
     flex-flow: row wrap;
 }
 
-.widget1:hover img, .widget2:hover img, .widget3:hover img {
-        transform: scale(1.2); 
-    }
+.redgradientwidget:hover img, .bluegradientwidget:hover img, .yellowgradientwidget:hover img {
+        transform: scale(1.2);
+}
 
-.widget1:hover{
+.redgradientwidget:hover{
+    box-shadow: -1px 1px 30px 5px rgba(235, 51, 73, 0.6);
+   
+    font-weight: 700;
+}
+
+.bluegradientwidget:hover{
     box-shadow: -1px 1px 30px 5px rgba(60, 211, 173, 0.6);
     font-weight: 700;
 }
 
-.widget2:hover{
-    box-shadow: -1px 1px 30px 5px rgba(235, 51, 73, 0.6);
-    font-weight: 700;
-}
-
-.widget3:hover{
+.yellowgradientwidget:hover{
     box-shadow: -1px 1px 30px 5px rgba(202, 197, 49, .6);
     font-weight: 700;
 }
 
-.widget1:hover .title, .widget2:hover .title, .widget3:hover .title{
+.redgradientwidget:hover .title, .bluegradientwidget:hover .title, .yellowgradientwidget:hover .title{
     font-weight: 700;
+}
+
+.redgradientwidget:hover img, .bluegradientwidget:hover img, .yellowgradientwidget:hover img {
+    transform: scale(1.2); 
+}
+
+
+
+.title {
+    padding:5px;
+    font-weight: 400;
+    font-size: 17px;    
+    color: white;
+    text-align: center;
+    border-radius: 7px 7px 0px 0px;
+}
+
+
+.titlecontainer {
+    padding:8px;
+    font-weight: 400;
+    box-shadow: 0px 8px 15px -2px rgba(0, 0, 0, 0.3);
+    border-radius: 7px 7px 0px 0px;
+}
+
+
+.addwidget p {
+    padding:11px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #bfbfbf;
+    text-align: center;
+}
+
+.addbtn{
+  background: linear-gradient(to left, #3CD3AD, #4CB8C4);
+  border-radius: 0px 7px 7px 0;
+  border: 0 !important;
+  color: white;
+  font-weight:400;
 }
