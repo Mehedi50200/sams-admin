@@ -1,49 +1,17 @@
 <div class="bodycontainer">
-  <div class ="main">
+  <div class= "container-fluid">
 
+    <div class="row">
 
-    <div class="addwidget scene_element scene_element--fadeinright" data-toggle="collapse" data-target="#collapsableForm" aria-expanded="false" aria-controls="collapsableForm">
-    <div class ="titlecontainer">
-        <p>Add New Course</p>
-    </div>
-        <img src ="../../assets/image/add.png">
-    </div>
-
-    <div class="collapse scene_element scene_element--fadein" id="collapsableForm">      
-          <form>         
-            <div class="form-group">                 
-                <input type="text" class="form-control" id="coursecode" placeholder="Course Code">
-            </div> 
-
-            <div class="form-group">
-                <input type="text" class="form-control" id="coursename" placeholder="Course Name">
-            </div>
-
-              <div class="form-group">
-                <input type="text" class="form-control" id="credit" placeholder="Credit">
-            </div>
-              
-            <div class="input-group">
-              <div class="custom-file">
-                <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
-                <label class="custom-file-label" for="inputGroupFile04">Choose image</label>
-              </div>
-              <div class="input-group-append">
-                <button class="addbtn" type="button" id="inputGroupFileAddon04">Add Course</button>
-              </div>
-            </div>
-          </form>
+      <div class="col-xl-3 col-lg-5 col-md-6">
+        <app-courseform></app-courseform>        
       </div>
 
-	  <div class="coursewidget scene_element scene_element--fadeinleft" *ngFor="let course of courses | async">
-      <div class ="titlecontainer">
-        <div class="title"> <span style="font-weight:600;">{{ course.CourseCode }}</span> &nbsp; <span>{{ course.CourseName }}</span></div>
-        <div class="title"> <span style="font-weight:600;">Credit</span> &nbsp; <span>{{ course.CourseCredit }}</span></div>
+      <div class="col-xl-9 col-lg-7 col-md-6">
+        <app-courselist></app-courselist>
       </div>
-		
-		  <img src ="{{course.Url}}">
-	  </div>
+
+    </div>
 
   </div>
 </div>
-

@@ -13,6 +13,8 @@ import { AngularFireDatabaseModule} from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
+import {FormsModule} from '@angular/forms'
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -24,6 +26,8 @@ import { CourseComponent } from './course/course.component';
 import { StudentComponent } from './student/student.component';
 
 import {CourseService} from './services/course.service';
+import { CourseformComponent } from './course/courseform/courseform.component';
+import { CourselistComponent } from './course/courselist/courselist.component';
 
 
 @NgModule({
@@ -35,7 +39,9 @@ import {CourseService} from './services/course.service';
     DashboardComponent,
     LecturerComponent,
     CourseComponent,
-    StudentComponent,   
+    StudentComponent,
+    CourseformComponent,
+    CourselistComponent,   
   ],
 
   imports: [
@@ -45,7 +51,8 @@ import {CourseService} from './services/course.service';
     AngularFireModule.initializeApp(environment.firebase, 'StudentAttendanceMonitoringSystemFrontend'),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    AngularFireStorageModule   
+    AngularFireStorageModule,
+    FormsModule
 
   ],
   providers: [CourseService],
