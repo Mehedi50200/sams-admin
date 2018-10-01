@@ -262,6 +262,10 @@ button :focus{
     transform: scale(1.2); 
 }
 
+.addwidget:hover {
+  box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.7);
+  transition: box-shadow 1s ease;
+}
 
 .title {
     padding:5px;
