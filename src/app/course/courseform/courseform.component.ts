@@ -38,6 +38,7 @@ export class CourseformComponent implements OnInit {
   onUpdate(form?: NgForm) {
     this.courseService.updateCourse(form.value);
     this.resetForm(form);
+    this.toastr.success('Course Updated Successfully', 'Course Updated');
   }
 
     

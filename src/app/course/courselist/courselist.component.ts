@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseService } from '../../services/course.service';
 import { Course } from '../../services/course';
-import { NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-courselist',
@@ -11,7 +11,7 @@ import { NgForm } from '@angular/forms';
 
 export class CourselistComponent implements OnInit {
   courseList: Course[];
-  constructor(private courseService: CourseService) {}
+  constructor(private courseService: CourseService, private toastr: ToastrService) {}
 
   ngOnInit() {
     var x= this.courseService.getCourses();
@@ -33,6 +33,7 @@ export class CourselistComponent implements OnInit {
   onDelete(key: string) {
     if (confirm('Are You Sure to Delete this Course') == true) {
       this.courseService.deleteCourse(key);
+      this.toastr.success('Course Deleted Successfully', 'Course Deleted');
     }
   }
 
