@@ -5,8 +5,11 @@
     "\\src\\app",
     "\\src\\app\\course",
     "\\src\\app\\course\\courseform",
-    "\\src\\app\\dashboard"
+    "\\src\\app\\course\\courselist",
+    "\\src\\app\\dashboard",
+    "\\src\\app\\login",
+    "\\src\\app\\services"
   ],
-  "SelectedNode": "\\src\\tsconfig.spec.json",
+  "SelectedNode": "\\src\\app\\course\\courselist\\courselist.component.ts",
   "PreviewInSolutionExplorer": false
 }

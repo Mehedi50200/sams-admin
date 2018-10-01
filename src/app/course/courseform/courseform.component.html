@@ -69,9 +69,6 @@
                   <label class="custom-file-label" for="inputGroupFile04">Choose image</label>
                 </div>
                 <div class="input-group-append">
-                  <button class="deletebtn" type="button" id="inputGroupFileAddon04" *ngIf="courseService.selectedCourse.$key!=''" (click)="onDelete(courseForm)" >Delete Course</button>
-                </div>
-                <div class="input-group-append">
                   <button class="addbtn" type="submit" id="inputGroupFileAddon04" [disabled]="!courseForm.valid">Update Course</button>
                 </div>                
               </div>

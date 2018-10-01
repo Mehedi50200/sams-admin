@@ -36,6 +36,9 @@ export class CourselistComponent implements OnInit {
     }
   }
 
+  onEdit(crs: Course) {
+    this.courseService.selectedCourse = Object.assign({},crs);
+  }
 
 
 }

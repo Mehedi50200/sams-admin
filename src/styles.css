@@ -66,7 +66,7 @@ body::-webkit-scrollbar { width:0 !important; }
 
   /** Basic styles for an animated element */
   .scene_element {
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     transition-timing-function: ease-in;
     animation-fill-mode: both;
 
@@ -74,24 +74,24 @@ body::-webkit-scrollbar { width:0 !important; }
 
   /** An element that fades in */
   .scene_element--fadein {
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-name: fadeIn;
   }
 
   /** An element that fades in and slides up */
   .scene_element--fadeinup {
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-name: fadeInUp;
   }
 
   /** An element that fades in and slides from the right */
   .scene_element--fadeinright {
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-name: fadeInRight;
   }
 
   .scene_element--fadeinleft {
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-name: fadeInLeft;
   }
 
@@ -160,24 +160,6 @@ button :focus{
 }
 
 
-.coursewidget {
-    flex-basis: 300px;
-    flex-grow: 10;
-    height: 260px;
-    margin: 10px;
-    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    background: linear-gradient(to left, #3CD3AD, #4CB8C4); 
-    position: relative;
-}
-
-.coursewidget img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60px;
-    margin-top: 30px;
-}
 
 .addwidget img{
     display: block;
@@ -237,14 +219,6 @@ button :focus{
         margin-top: 40px;
     }
    
-    .coursewidget img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 80px;
-        margin-top: 20px;
-    }
-
     .addwidget img {
         display: block;
         margin-left: auto;
@@ -262,7 +236,7 @@ button :focus{
 }
 
 .redgradientwidget:hover img, .bluegradientwidget:hover img, .yellowgradientwidget:hover img {
-        transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .redgradientwidget:hover{
@@ -284,16 +258,10 @@ button :focus{
     font-weight: 700;
 }
 
-.redgradientwidget:hover img, .coursewidget:hover img, .bluegradientwidget:hover img, .yellowgradientwidget:hover img {
+.redgradientwidget:hover img .bluegradientwidget:hover img, .yellowgradientwidget:hover img {
     transform: scale(1.2); 
 }
 
-.coursewidget:hover{
-    transform: scale(1.01);
-    background: linear-gradient(to left, #EB3349, #F45C43);
-    box-shadow: -1px 1px 30px 5px rgba(235, 51, 73, 0.6);
-    font-weight: 700;
-}
 
 .title {
     padding:5px;

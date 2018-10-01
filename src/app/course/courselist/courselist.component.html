@@ -1,13 +1,24 @@
 <div class ="main">
-  <div class="coursewidget" *ngFor="let course of courseList" (click)="onItemClick(course)">
+  <div class="coursewidget" *ngFor="let course of courseList">
     <div class="titlecontainer">
       <div class="title"> <span style="font-weight:600;">{{ course.CourseCode }}</span> &nbsp; <span>{{ course.CourseName }}</span></div>
       <div class="title"> <span style="font-weight:600;">Credit</span> &nbsp; <span>{{ course.CourseCredit }}</span></div>
     </div>
-    <img src="{{course.Url}}">
+    <div class="courseimage">
+      <img src="{{course.Url}}">
+    </div>
+   
 
-    <div class="button"><a (click)="onDelete(course.$key)"> <img src ="../../assets/image/loginformimage.png"></a></div>
-    <div class="button"><a (click)="onEdit(course)"> <img src="../../assets/image/loginformimage.png"></a></div>
+    <div class="btngroup">
+      <div class="overlay"></div>
+      <div class="row">
+        <div class="button"><a (click)="onDelete(course.$key)"> <img src="../../assets/image/deletebtn.png"></a></div>
+        <div class="button" data-toggle="collapse" data-target="#collapsableEditForm" aria-expanded="false" aria-controls="collapsableEditForm"><a (click)="onEdit(course)"> <img src="../../assets/image/editbtn.png"></a></div>
+      </div>
+      
+    </div>
+
+   
 
   </div>
 </div>
