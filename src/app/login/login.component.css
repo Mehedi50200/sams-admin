@@ -55,40 +55,41 @@ button:hover{
    box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.1);
 }
 
+.container-fluid{
+  margin-top:0px;
+}
+
 form{
 	margin-top: 50px;
-	margin-bottom: 50px; 
+	margin-bottom: 50px;
 }
 
 #p1{
 	text-align: center;
 	color: white;
-	margin-top: 30px;
+	margin-top: 20px;
 	font-size: 19px;
 }
 
 #p2{
 	text-align: center;
 	color: white;
-	margin-top: 50px;
+	margin-top: 20px;
 	font-size: 15px;
 	font-style: italic;
 }
 
-
-.col-md-6{
- 	box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.1);
- 	min-height: 200px;
+#login-form{
+ 	box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
+  margin-top:0px;
  }
 
-.col-md-10{
-	margin: auto;
-}
-
-#login-form{
-	margin: auto;
-	margin-top: 8%;
-}
+ @media screen and (min-width: 900px) {
+    #login-form{
+ 	    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
+      margin-top:100px;
+    }
+ }
 
 #login-imagebox{
 	background-image: linear-gradient(#36D1DC,#5B86E5);
@@ -100,27 +101,25 @@ form{
 	border-radius: 0px 8px 8px 0px;
 }
 
- #login-formbox img{
-    width: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle
- }
-
- #login-imagebox img{
-    width: 100%;
-    padding: 10%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10%;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle
+#login-formbox img{
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle
 }
 
+#login-imagebox img{
+  width:60%;
+  text-align: center;
+  display: table-cell;
+  margin:auto;
+  margin-bottom:20px;  
+  margin-top: 20px;
+  vertical-align: middle;
+}
 
 
 

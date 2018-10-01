@@ -1,9 +1,13 @@
 <div class ="main">
-  <div class="coursewidget" *ngFor="let course of courseList" (click)="onItemClick(course)" >
-    <div class ="titlecontainer">
-        <div class="title"> <span style="font-weight:600;">{{ course.CourseCode }}</span> &nbsp; <span>{{ course.CourseName }}</span></div>
-        <div class="title"> <span style="font-weight:600;">Credit</span> &nbsp; <span>{{ course.CourseCredit }}</span></div>
-    </div>		
-		<img src ="{{course.Url}}">
-	</div>
+  <div class="coursewidget" *ngFor="let course of courseList" (click)="onItemClick(course)">
+    <div class="titlecontainer">
+      <div class="title"> <span style="font-weight:600;">{{ course.CourseCode }}</span> &nbsp; <span>{{ course.CourseName }}</span></div>
+      <div class="title"> <span style="font-weight:600;">Credit</span> &nbsp; <span>{{ course.CourseCredit }}</span></div>
+    </div>
+    <img src="{{course.Url}}">
+
+    <div class="button"><a (click)="onDelete(course.$key)"> <img src ="../../assets/image/loginformimage.png"></a></div>
+    <div class="button"><a (click)="onEdit(course)"> <img src="../../assets/image/loginformimage.png"></a></div>
+
+  </div>
 </div>

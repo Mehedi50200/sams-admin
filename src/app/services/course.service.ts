@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList} from '@angular/fire/database';
-import { Observable } from 'rxjs/Observable';
-import { Course } from './course.ts';
+import { Course } from './course';
 
 
 @Injectable()
@@ -20,23 +19,22 @@ export class CourseService {
 
   insertCourse(course: Course){
     this.courseList.push({
-      CourseCode: course.CourseCode;
-      CourseName: course.CourseName;
-      CourseCredit: course.CourseCredit;
+      CourseCode: course.CourseCode,
+      CourseName: course.CourseName,
+      CourseCredit: course.CourseCredit,
     });
   }
 
   updateCourse(course: Course){
     this.courseList.update(course.$key,{
-      CourseCode: course.CourseCode;
-      CourseName: course.CourseName;
-      CourseCredit: course.CourseCredit;
+      CourseCode: course.CourseCode,
+      CourseName: course.CourseName,
+      CourseCredit: course.CourseCredit,
     });
   }
 
   deleteCourse(key: string){
     this.courseList.remove(key);
   }
-
 
 }

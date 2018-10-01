@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseService } from '../../services/course.service';
 import { Course } from '../../services/course';
-import {NgForm} from '@angular/forms'
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-courselist',
@@ -28,4 +28,14 @@ export class CourselistComponent implements OnInit {
   onItemClick(crs : Course){
     this.courseService.selectedCourse= Object.assign({}, crs); 
   }
+
+
+  onDelete(key: string) {
+    if (confirm('Are You Sure to Delete this Course') == true) {
+      this.courseService.deleteCourse(key);
+    }
+  }
+
+
+
 }

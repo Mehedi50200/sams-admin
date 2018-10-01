@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseService } from '../../services/course.service';
-import { Course } from '../../services/course';
-import {NgForm} from '@angular/forms'
+import { NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-courseform',
   templateUrl: './courseform.component.html',
   styleUrls: ['./courseform.component.css']
 })
+
 export class CourseformComponent implements OnInit {
 
-  constructor(private courseService: CourseService) { }
+  constructor(private courseService: CourseService, private toastr: ToastrService) { }
 
   ngOnInit() {
   }
@@ -19,31 +20,25 @@ export class CourseformComponent implements OnInit {
   {
     this.courseService.insertCourse(form.value);
     this.resetForm(form);
+    this.toastr.success('Course Added Successfully', 'Course Added');
   }
 
-  onUpdate(form?: NgForm)
-  {
-    this.courseService.updateCourse(form.value);
-    this.resetForm(form);
-  }
-
+ 
   resetForm(form : NgForm){
     if (form != null)
         form.reset();
     this.courseService.selectedCourse = {
-      $key : '';
-      CourseCode : '';
-      CourseName : '';
-      CourseCredit : ''; 
+      $key : '',
+      CourseCode : '',
+      CourseName : '',
+      CourseCredit : '', 
     }
   }
 
-  onDelete(form : NgForm){
-    if(confirm('Are You Sure to Delete this Course')==true){
-      this.courseService.deleteCourse(form.value.$key);
-      this.resetForm(form);
-    }
+  onUpdate(form?: NgForm) {
+    this.courseService.updateCourse(form.value);
+    this.resetForm(form);
   }
 
-  
+    
 }

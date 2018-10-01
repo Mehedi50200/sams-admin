@@ -4,8 +4,9 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\course",
+    "\\src\\app\\course\\courseform",
     "\\src\\app\\dashboard"
   ],
-  "SelectedNode": "\\src\\app\\dashboard\\dashboard.component.html",
+  "SelectedNode": "\\src\\tsconfig.spec.json",
   "PreviewInSolutionExplorer": false
 }
