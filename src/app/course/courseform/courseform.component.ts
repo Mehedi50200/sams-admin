@@ -3,6 +3,7 @@ import { CourseService } from '../../services/course.service';
 import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 
+
 @Component({
   selector: 'app-courseform',
   templateUrl: './courseform.component.html',
@@ -13,6 +14,7 @@ export class CourseformComponent implements OnInit {
 
   constructor(private courseService: CourseService, private toastr: ToastrService) { }
 
+  
   ngOnInit() {
   }
     
@@ -26,12 +28,14 @@ export class CourseformComponent implements OnInit {
  
   resetForm(form : NgForm){
     if (form != null)
-        form.reset();
+      form.reset();
+
     this.courseService.selectedCourse = {
       $key : '',
       CourseCode : '',
       CourseName : '',
-      CourseCredit : '', 
+      CourseCredit: '',
+      Url: '',
     }
   }
 

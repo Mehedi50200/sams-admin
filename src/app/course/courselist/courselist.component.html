@@ -12,12 +12,10 @@
     <div class="btngroup">
       <div class="overlay"></div>
       <div class="row">
-        <div class="button"><a (click)="onDelete(course.$key)"> <img src="../../assets/image/deletebtn.png"></a></div>
-        <div class="button" data-toggle="collapse" data-target="#collapsableEditForm" aria-expanded="false" aria-controls="collapsableEditForm"><a (click)="onEdit(course)"> <img src="../../assets/image/editbtn.png"></a></div>
-      </div>
-      
+        <div class="button" routerLink="/course, #collapsableEditForm"><a (click)="onDelete(course.$key)"> <img src="../../assets/image/deletebtn.png"></a></div>
+        <div class="button" data-toggle="collapse" data-target="#collapsableEditForm" aria-expanded="false" aria-controls="collapsableEditForm" ><a (click)="onEdit(course)"> <img src="../../assets/image/editbtn.png"></a></div>
+      </div>      
     </div>
-
    
 
   </div>

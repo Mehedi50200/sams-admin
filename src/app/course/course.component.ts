@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 class Course {
     constructor(public course) { }
 }
@@ -16,3 +17,5 @@ export class CourseComponent implements OnInit {
   ngOnInit() {}
 
 }
+
+

@@ -1,78 +1,68 @@
-<div class ="main">
-          <div class="addwidget scene_element scene_element--fadeinright" data-toggle="collapse" data-target="#collapsableForm" aria-expanded="false" aria-controls="collapsableForm">
-            <div class ="titlecontainer">
-                <p>Add New Course</p>
-            </div>
-            <p><span style="color:#3CD3AD; font-size:14px;"> Add new Course from here </span></p>
-              <img src ="../../assets/image/add.png">
-          </div>
+<div class="main">
+  <div class="addwidget scene_element scene_element--fadeinright" data-toggle="collapse" data-target="#collapsableForm" aria-expanded="false" aria-controls="collapsableForm">
+    <div class="titlecontainer">
+      <p>Add New Course</p>
+    </div>
+    <p><span style="color:#3CD3AD; font-size:14px;"> Add new Course from here </span></p>
+    <img src="../../assets/image/add.png">
+  </div>
+  <div class="collapse scene_element scene_element--fadein" id="collapsableForm">
+    <form #courseForm="ngForm" (ngSubmit)="onSubmit(courseForm)">
+      <div class="form-group">
+        <input type="hidden" class="form-control" name="$key" #name="ngModel" [(ngModel)]="courseService.selectedCourse.$key" id="coursecode" placeholder="Course Code" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name="CourseCode" #name="ngModel" [(ngModel)]="courseService.selectedCourse.CourseCode" id="coursecode" placeholder="Course Code" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name="CourseName" #name="ngModel" [(ngModel)]="courseService.selectedCourse.CourseName" id="coursename" placeholder="Course Name" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name="CourseCredit" #name="ngModel" [(ngModel)]="courseService.selectedCourse.CourseCredit" id="coursecredit" placeholder="Course Credit" required>
+      </div>
 
-          <div class="collapse scene_element scene_element--fadein" id="collapsableForm">      
-            <form #courseForm="ngForm" (ngSubmit)="onSubmit(courseForm)">
-              <div class="form-group">                 
-                  <input type="hidden" class="form-control" name="$key" #name="ngModel" [(ngModel)]="courseService.selectedCourse.$key"  id="coursecode" placeholder="Course Code" required>
-              </div>
-
-              <div class="form-group">                 
-                  <input type="text" class="form-control" name="CourseCode" #name="ngModel" [(ngModel)]="courseService.selectedCourse.CourseCode"  id="coursecode" placeholder="Course Code" required>
-              </div> 
-
-              <div class="form-group">
-                  <input type="text" class="form-control" name="CourseName" #name="ngModel" [(ngModel)]="courseService.selectedCourse.CourseName"  id="coursename" placeholder="Course Name" required >
-              </div>
-
-                <div class="form-group">
-                  <input type="text" class="form-control" name="CourseCredit" #name="ngModel" [(ngModel)]="courseService.selectedCourse.CourseCredit"  id="coursecredit" placeholder="Course Credit" required>
-              </div>
-              
-              <div class="input-group">
-                <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
-                  <label class="custom-file-label" for="inputGroupFile04">Choose image</label>
-                </div>
-                <div class="input-group-append">
-                  <button class="addbtn" type="submit" id="inputGroupFileAddon04" [disabled]="!courseForm.valid"  data-toggle="collapse" data-target="#collapsableForm" aria-expanded="false" aria-controls="collapsableForm">Add Course</button>
-                </div>
-              </div>
-            </form>
-          </div>
-
-          <div class="addwidget scene_element scene_element--fadeinright" data-toggle="collapse" data-target="#collapsableEditForm" aria-expanded="false" aria-controls="collapsableEditForm">
-            <div class ="titlecontainer">
-              <p>Edit</p>
-            </div>
-                <p><span style="color:#EB3349; font-size:14px;">Edit or Delete Course from here </span></p>
-              <img src ="../../assets/image/edit.png">
-          </div>
-
-          <div class="collapse scene_element scene_element--fadein" id="collapsableEditForm">      
-            <form #courseForm="ngForm" (ngSubmit)="onUpdate(courseForm)">
-              <div class="form-group">                 
-                  <input type="hidden" class="form-control" name="$key" #name="ngModel" [(ngModel)]="courseService.selectedCourse.$key"  id="key" placeholder="Course Code" required>
-              </div>
-
-              <div class="form-group">                 
-                  <input type="text" class="form-control" name="CourseCode" #name="ngModel" [(ngModel)]="courseService.selectedCourse.CourseCode"  id="coursecode" placeholder="Course Code" required>
-              </div> 
-
-              <div class="form-group">
-                  <input type="text" class="form-control" name="CourseName" #name="ngModel" [(ngModel)]="courseService.selectedCourse.CourseName"  id="coursename" placeholder="Course Name" required >
-              </div>
-
-                <div class="form-group">
-                  <input type="text" class="form-control" name="CourseCredit" #name="ngModel" [(ngModel)]="courseService.selectedCourse.CourseCredit"  id="coursecredit" placeholder="Course Credit" required>
-              </div>
-              
-              <div class="input-group">
-                <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
-                  <label class="custom-file-label" for="inputGroupFile04">Choose image</label>
-                </div>
-                <div class="input-group-append">
-                  <button class="addbtn" type="submit" id="inputGroupFileAddon04" [disabled]="!courseForm.valid"  data-toggle="collapse" data-target="#collapsableEditForm" aria-expanded="false" aria-controls="collapsableEditForm">Update Course</button>
-                </div>                
-              </div>
-            </form>
-          </div>
-
+      <div class="input-group">
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+          <label class="custom-file-label" for="inputGroupFile04">Choose image</label>
         </div>
+        <div class="input-group-append">
+          <button class="addbtn" type="submit" id="inputGroupFileAddon04" [disabled]="!courseForm.valid" data-toggle="collapse" data-target="#collapsableForm" aria-expanded="false" aria-controls="collapsableForm">Add Course</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="addwidget scene_element scene_element--fadeinright" data-toggle="collapse" data-target="#collapsableEditForm" aria-expanded="false" aria-controls="collapsableEditForm">
+    <div class="titlecontainer">
+      <p>Edit</p>
+    </div>
+    <p><span style="color:#EB3349; font-size:14px;">Edit or Delete Course from here </span></p>
+    <img src="../../assets/image/edit.png">
+  </div>
+  <div class="collapse scene_element scene_element--fadein" id="collapsableEditForm">
+    <form #courseForm="ngForm" (ngSubmit)="onUpdate(courseForm)">
+      <div class="form-group">
+        <input type="hidden" class="form-control" name="$key" #name="ngModel" [(ngModel)]="courseService.selectedCourse.$key" id="key" placeholder="Course Code" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name="CourseCode" #name="ngModel" [(ngModel)]="courseService.selectedCourse.CourseCode" id="coursecode" placeholder="Course Code" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name="CourseName" #name="ngModel" [(ngModel)]="courseService.selectedCourse.CourseName" id="coursename" placeholder="Course Name" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name="CourseCredit" #name="ngModel" [(ngModel)]="courseService.selectedCourse.CourseCredit" id="coursecredit" placeholder="Course Credit" required>
+      </div>
+
+      <div class="input-group">
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+          <label class="custom-file-label" for="inputGroupFile04">Choose image</label>
+        </div>
+        <div class="input-group-append">
+          <button class="addbtn" type="submit" id="inputGroupFileAddon04" [disabled]="!courseForm.valid" data-toggle="collapse" data-target="#collapsableEditForm" aria-expanded="false" aria-controls="collapsableEditForm">Update Course</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

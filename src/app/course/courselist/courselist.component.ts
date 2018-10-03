@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseService } from '../../services/course.service';
-import { Course } from '../../services/course';
+import { Course } from '../course';
 import { ToastrService } from 'ngx-toastr';
+
+
+
 
 @Component({
   selector: 'app-courselist',
@@ -9,9 +12,11 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./courselist.component.css']
 })
 
+
 export class CourselistComponent implements OnInit {
-  courseList: Course[];
-  constructor(private courseService: CourseService, private toastr: ToastrService) {}
+  courseList: Course[];   
+  constructor(private courseService: CourseService, private toastr: ToastrService) { }
+
 
   ngOnInit() {
     var x= this.courseService.getCourses();

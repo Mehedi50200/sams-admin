@@ -1,0 +1,22 @@
+<div class="main">
+  <div class="coursewidget" *ngFor="let course of courseList">
+    <div class="row">
+      <div class="col-3">
+        <div class="courseimage">
+          <img src="{{course.Url}}">
+        </div>
+      </div>
+      <div class="col-9">
+        <div class="titlecontainer">
+          <div class="title"> <span style="font-weight:600;">{{ course.CourseCode }}</span> &nbsp; <span>{{ course.CourseName }}</span></div>
+          <div class="title"> <span style="font-weight:600;">Credit</span> &nbsp; <span>{{ course.CourseCredit }}</span></div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="overlay"></div>
+
+
+
+  </div>
+</div>

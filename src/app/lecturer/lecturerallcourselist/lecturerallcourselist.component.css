@@ -1,0 +1,108 @@
+.btngroup {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+
+.button {
+  display: inline-block;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+.button img {
+  width: 30px;
+  margin: 8px;
+  opacity: .5;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.0);
+  transition: background 0.5s ease;
+  border-radius: 7px;
+}
+
+.coursewidget:hover .overlay {
+  display: block;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+.coursewidget {
+  flex-basis: 300px;
+  flex-grow: 10;
+  height: 100px;
+  margin: 10px;
+  box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background: linear-gradient(to left, #3CD3AD, #4CB8C4);
+  position: relative;
+}
+
+
+.courseimage{
+  display: inline-block;
+  height: 100px;
+  width:100px;
+  vertical-align: central;
+}
+
+.courseimage img {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left:10px;
+  vertical-align: central;
+  border-radius: 50%;
+  box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
+}
+
+.coursewidget img[src=""] {
+  display: none;
+}
+
+
+/* set element styles for desktop */
+@media screen and (min-width: 900px) {
+
+}
+
+.coursewidget:hover {
+  transform: translateY(-3px) scale(1.015);
+  /*  background: linear-gradient(to left, #EB3349, #F45C43); */
+  box-shadow: -1px 1px 30px 5px rgba(0, 51, 73, 0.6);
+  font-weight: 700;
+  transition: transform 0.3s ease;
+}
+
+.coursewidget:hover img {
+  transform: scale(1.05);
+  box-shadow: 0px -1px 10px 5px rgba(0, 0, 0, 0.1);
+  transition: transform .5s ease;
+}
+
+.titlecontainer {
+  padding: 8px;
+  font-weight: 400;
+  height: 100px;
+  box-shadow: -4px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 0px 7px 7px 0px;
+}
+
+.title {
+  padding: 5px;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  border-radius: 7px 7px 0px 0px;
+}

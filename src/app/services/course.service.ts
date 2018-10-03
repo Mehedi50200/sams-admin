@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList} from '@angular/fire/database';
-import { Course } from './course';
+import { Course } from '../course/course';
 
 
 @Injectable()
@@ -36,5 +36,9 @@ export class CourseService {
   deleteCourse(key: string){
     this.courseList.remove(key);
   }
+
+  
+
+
 
 }

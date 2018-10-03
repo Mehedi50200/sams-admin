@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { LecturerService } from '../services/lecturer.service';
+import { Lecturer } from './lecturer';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-lecturer',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LecturerComponent implements OnInit {
 
-  constructor() { }
+  lecturerList: Lecturer[];
+  constructor(private lecturerService: LecturerService, private toastr: ToastrService) { }
 
   ngOnInit() {
+    var x = this.lecturerService.getLecturers();
+    x.snapshotChanges().subscribe(item => {
+      this.lecturerList = [];
+      item.forEach(element => {
+        var y = element.payload.toJSON();
+        y["$key"] = element.key;
+        this.lecturerList.push(y as Lecturer);
+      });
+    });
+
   }
 
 }

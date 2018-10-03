@@ -14,19 +14,30 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { LecturerComponent } from './lecturer/lecturer.component';
-import { CourseComponent } from './course/course.component';
-import { StudentComponent } from './student/student.component';
 
-import { CourseService } from './services/course.service';
+import { CourseComponent } from './course/course.component';
 import { CourseformComponent } from './course/courseform/courseform.component';
 import { CourselistComponent } from './course/courselist/courselist.component';
+
+import { StudentComponent } from './student/student.component';
+
+
+import { LecturerComponent } from './lecturer/lecturer.component';
+import { LecturerprofileComponent } from './lecturer/lecturerprofile/lecturerprofile.component';
+import { LecturerassignedcourseComponent } from './lecturer/lecturerassignedcourse/lecturerassignedcourse.component';
+import { LecturerallcourselistComponent } from './lecturer/lecturerallcourselist/lecturerallcourselist.component';
+
+
+import { CourseService } from './services/course.service';
+import { LecturerService } from './services/lecturer.service';
+
 
 
 @NgModule({
@@ -36,15 +47,19 @@ import { CourselistComponent } from './course/courselist/courselist.component';
     FooterComponent,
     LoginComponent,
     DashboardComponent,
-    LecturerComponent,
     CourseComponent,
     StudentComponent,
     CourseformComponent,
-    CourselistComponent,   
+    CourselistComponent,
+    LecturerComponent,
+    LecturerprofileComponent,
+    LecturerassignedcourseComponent,
+    LecturerallcourselistComponent,
   ],
 
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes, {useHash: false}),
     AngularFireModule.initializeApp(environment.firebase, 'StudentAttendanceMonitoringSystemFrontend'),
@@ -55,7 +70,7 @@ import { CourselistComponent } from './course/courselist/courselist.component';
     ToastrModule.forRoot(),
 
   ],
-  providers: [CourseService],
+  providers: [CourseService, LecturerService],
   bootstrap: [AppComponent]
 })
 
