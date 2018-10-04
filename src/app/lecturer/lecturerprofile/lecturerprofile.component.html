@@ -1,3 +1,23 @@
-<p>
-  lecturerprofile works!
-</p>
+<div class="bodycontainer">
+
+  <div class="main">
+    <a href="#" class="card" *ngFor="let assignedCourse of assignedCourseList">
+      <div class="overlay"></div>    
+
+      <div class="userName">
+        <p>{{assignedCourse.$key}}</p>
+      </div>
+      <div class="userEmail">
+        <p>{{assignedCourse.CourseName}}</p>
+      </div>
+      <div class="userEmail">
+        <p>{{assignedCourse.Routine.Day}}</p>
+      </div>
+      <div class="userEmail">
+        <p>{{assignedCourse.Routine.Time}}</p>
+      </div>
+
+    </a>
+  </div>
+
+</div>

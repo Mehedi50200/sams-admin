@@ -15,6 +15,7 @@ export class LecturerComponent implements OnInit {
 
   ngOnInit() {
     var x = this.lecturerService.getLecturers();
+    console.log(x);
     x.snapshotChanges().subscribe(item => {
       this.lecturerList = [];
       item.forEach(element => {
