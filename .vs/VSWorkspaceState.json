@@ -6,9 +6,9 @@
     "\\src\\app\\course",
     "\\src\\app\\course\\courseform",
     "\\src\\app\\course\\courselist",
-    "\\src\\app\\services",
-    "\\src\\app\\student"
+    "\\src\\app\\lecturer",
+    "\\src\\app\\services"
   ],
-  "SelectedNode": "\\src\\app\\student",
+  "SelectedNode": "\\src\\styles.css",
   "PreviewInSolutionExplorer": false
 }

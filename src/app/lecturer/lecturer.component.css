@@ -1,10 +1,3 @@
-.human-resources {
-  --bg-color: #DCE9FF;
-  --bg-color-light: #f1f7ff;
-  --text-color-hover: #4C5656;
-  --box-shadow-color: rgba(220, 233, 255, 0.48);
-}
-
 .card {
   width: 240px;
   height: 220px;
@@ -16,14 +9,10 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+  box-shadow: 0 14px 26px rgba(0,0,0,0.1);
   transition: all 0.3s ease-out;
   text-decoration: none;
   margin:5px;
-}
-
-.main {
-  margin:auto;
 }
 
 
@@ -34,23 +23,15 @@
 }
 
 .card:hover .overlay {
-  transform: scale(5) translateZ(0);
+  transform: scale(5);
   transition: transform 1s ease;
 }
 
-.card:hover .circle {
-  border-color: var(--bg-color-light);
-  background: var(--bg-color);
-}
 
-.card:hover .circle:after {
-  background: var(--bg-color-light);
-}
 
 .card:hover p {
   color: rgb(0, 0, 0);
-  transform: scale(1.2) translateZ(0);
-  z-index:1;
+  transform: scale(1.1);
 }
 
 .card:active {
@@ -81,7 +62,7 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.3), 0 15px 24px var(--box-shadow-color);
+  box-shadow: 0 5px 14px rgba(0,0,0,0.3), 0 15px 24px rgba(0,0,0, 0.2);
 }
 
 .circle img[src=""] {
@@ -94,7 +75,7 @@
   position: absolute;
   height: 110px;
   border-radius: 50%;
-  background: var(--bg-color);
+  background: linear-gradient(to left, #3CD3AD, #4CB8C4);
   top: 10px;
   left: 60px;
   z-index: -1;
