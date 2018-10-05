@@ -1,23 +1,22 @@
 <div class="bodycontainer">
   <div class="container-fluid">
     <div class="row">
-      <div class="main">
-        <a href="#" class="card">
-          <div class="overlay"></div>
-
-          <div class="userName">
-            <p> {{userName}}</p>
-          </div>
-          <div class="userName">
-            <p> {{userEmail}}</p>
-          </div>
-          <div class="circle">
-            <img src={{userProfileImageUrl}} />
-          </div>
-
-        </a>
+      <div class="profilecard" *ngFor="let lecturerProf of lecturerProfile">
+       
+        <div class="userName">
+          <p> {{lecturerProf.userName}}</p>
+        </div>
+        <div class="userName">
+          <p> {{lecturerProf.userEmail}}</p>
+        </div>
+        <div class="circle">
+          <img src={{lecturerProf.userProfileImageUrl}} />
+        </div>
+        
       </div>
     </div>
+
+ 
 
     <div class="row">
       <div class="main">

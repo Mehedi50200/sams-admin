@@ -4,7 +4,7 @@ import { LecturerService } from '../../services/lecturer.service';
 import { AssignedCourse } from '../lecturerassignedcourse';
 import { LecturerProfile } from './lecturerprofile';
 import { Observable } from 'rxjs';
-import { Lecturer } from '../lecturer';
+
 
 @Component({
   selector: 'app-lecturerprofile',
@@ -14,12 +14,14 @@ import { Lecturer } from '../lecturer';
 export class LecturerprofileComponent implements OnInit {
 
   assignedCourseList: AssignedCourse[];
+  lecturerProfileObservable: Observable<any>;
   private routeSub: any;
   userId: string;
   userName: string;
   userEmail: string;
   userProfileImageUrl: string;
-  lecturerProfile: Observable<any>;
+  lecturerProfile: LecturerProfile[];
+  
   
 
   constructor(private route: ActivatedRoute, private lecturerService: LecturerService) { }
@@ -32,10 +34,21 @@ export class LecturerprofileComponent implements OnInit {
 
     });
 
-    this.userName = this.lecturerService.selectedLecturer.userName;
-    this.userEmail = this.lecturerService.selectedLecturer.userEmail;
-    this.userProfileImageUrl = this.lecturerService.selectedLecturer.userProfileImageUrl;
+    this.lecturerProfileObservable = this.lecturerService.getLecturerProfile(this.userId).valueChanges();
 
+    var p = this.lecturerService.getLecturerProfile(this.userId);
+    p.snapshotChanges().subscribe(action => {
+      //  console.log(action.type);
+      this.lecturerProfile = [];
+      console.log(action.key)
+      console.log(action.payload.val())
+      var q = action.payload.toJSON();
+      this.lecturerProfile.push(q as LecturerProfile);
+      
+    });
+   
+
+    
     var x = this.lecturerService.getAssignedCourse(this.userId);
     x.snapshotChanges().subscribe(item => {
       this.assignedCourseList = [];
@@ -46,8 +59,6 @@ export class LecturerprofileComponent implements OnInit {
       });
     });
         
-  }
-
-  
+  }  
 
 }

@@ -11,6 +11,6 @@
     "\\src\\app\\lecturer\\lecturerprofile",
     "\\src\\app\\services"
   ],
-  "SelectedNode": "\\src\\app\\services\\lecturer.service.ts",
+  "SelectedNode": "\\src\\app\\lecturer\\lecturerprofile\\lecturerprofile.component.ts",
   "PreviewInSolutionExplorer": false
 }

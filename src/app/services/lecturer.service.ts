@@ -12,7 +12,7 @@ export class LecturerService {
 
   lecturerList: AngularFireList<any>;
   assignedCourseList: AngularFireList<any>;
-  lecturerProfile: AngularFireList<any>;
+  lecturerProfile: AngularFireObject<any>;
 
 
 
@@ -25,14 +25,15 @@ export class LecturerService {
     return this.lecturerList;
   }
 
-  
-  getLecturerProfile(userId: string) {
-    this.lecturerProfile = this.db.list('Users/' + userId)
-    return this.lecturerProfile;    
+
+  getLecturerProfile(userId: string){
+    this.lecturerProfile = this.db.object('Users/' + userId);
+    return this.lecturerProfile;
   }
 
+
   getAssignedCourse(userId: string) {
-    this.assignedCourseList = this.db.list('Users/' + userId + '/Course')
+    this.assignedCourseList = this.db.list('Users/' + userId + '/Course');
     return this.assignedCourseList;
   }
 
