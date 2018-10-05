@@ -7,8 +7,10 @@
     "\\src\\app\\course\\courseform",
     "\\src\\app\\course\\courselist",
     "\\src\\app\\lecturer",
+    "\\src\\app\\lecturer\\lecturerallcourselist",
+    "\\src\\app\\lecturer\\lecturerprofile",
     "\\src\\app\\services"
   ],
-  "SelectedNode": "\\src\\styles.css",
+  "SelectedNode": "\\src\\app\\services\\lecturer.service.ts",
   "PreviewInSolutionExplorer": false
 }

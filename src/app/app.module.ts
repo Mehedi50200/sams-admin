@@ -31,7 +31,6 @@ import { StudentComponent } from './student/student.component';
 
 import { LecturerComponent } from './lecturer/lecturer.component';
 import { LecturerprofileComponent } from './lecturer/lecturerprofile/lecturerprofile.component';
-import { LecturerassignedcourseComponent } from './lecturer/lecturerassignedcourse/lecturerassignedcourse.component';
 import { LecturerallcourselistComponent } from './lecturer/lecturerallcourselist/lecturerallcourselist.component';
 
 
@@ -53,7 +52,6 @@ import { LecturerService } from './services/lecturer.service';
     CourselistComponent,
     LecturerComponent,
     LecturerprofileComponent,
-    LecturerassignedcourseComponent,
     LecturerallcourselistComponent,
   ],
 

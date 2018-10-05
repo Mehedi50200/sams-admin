@@ -1,23 +1,51 @@
 <div class="bodycontainer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="main">
+        <a href="#" class="card">
+          <div class="overlay"></div>
 
-  <div class="main">
-    <a href="#" class="card" *ngFor="let assignedCourse of assignedCourseList">
-      <div class="overlay"></div>    
+          <div class="userName">
+            <p> {{userName}}</p>
+          </div>
+          <div class="userName">
+            <p> {{userEmail}}</p>
+          </div>
+          <div class="circle">
+            <img src={{userProfileImageUrl}} />
+          </div>
 
-      <div class="userName">
-        <p>{{assignedCourse.$key}}</p>
+        </a>
       </div>
-      <div class="userEmail">
-        <p>{{assignedCourse.CourseName}}</p>
-      </div>
-      <div class="userEmail">
-        <p>{{assignedCourse.Routine.Day}}</p>
-      </div>
-      <div class="userEmail">
-        <p>{{assignedCourse.Routine.Time}}</p>
-      </div>
+    </div>
 
-    </a>
+    <div class="row">
+      <div class="main">
+        <a href="#" class="card" *ngFor="let assignedCourse of assignedCourseList">
+          <div class="overlay"></div>
+
+          <div class="courseCode">
+            <p>{{assignedCourse.$key}}</p>
+          </div>
+          <div class="courseName">
+            <p>{{assignedCourse.CourseName}}</p>
+          </div>
+          <div class="day">
+            <p>{{assignedCourse.Routine.Day}}</p>
+          </div>
+          <div class="time">
+            <p>{{assignedCourse.Routine.Time}}</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+
+
+    </div>
+
+
+
   </div>
-
 </div>

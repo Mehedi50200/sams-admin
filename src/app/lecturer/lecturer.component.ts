@@ -27,4 +27,11 @@ export class LecturerComponent implements OnInit {
 
   }
 
+  onLecturerSelect(lecturer: Lecturer) {
+    this.lecturerService.selectedLecturer = Object.assign({}, lecturer);
+    console.log(lecturer);
+
+  }
+
+
 }

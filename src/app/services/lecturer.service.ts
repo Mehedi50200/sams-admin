@@ -1,21 +1,22 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { AngularFireDatabase, AngularFireList, AngularFireObject} from '@angular/fire/database';
 import { Lecturer } from '../lecturer/lecturer';
-import { AssignedCourse } from '../lecturer/lecturerassignedcourse/lecturerassignedcourse';
-
+import { LecturerProfile } from '../lecturer/lecturerprofile/lecturerprofile'
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 
-
-
 export class LecturerService {
 
   lecturerList: AngularFireList<any>;
   assignedCourseList: AngularFireList<any>;
+  lecturerProfile: AngularFireList<any>;
+
+
+
   selectedLecturer: Lecturer = new Lecturer();
-  selectedAssignedCourse: AssignedCourse = new AssignedCourse();
 
   constructor(private db: AngularFireDatabase) { }
 
@@ -24,10 +25,15 @@ export class LecturerService {
     return this.lecturerList;
   }
 
+  
+  getLecturerProfile(userId: string) {
+    this.lecturerProfile = this.db.list('Users/' + userId)
+    return this.lecturerProfile;    
+  }
+
   getAssignedCourse(userId: string) {
     this.assignedCourseList = this.db.list('Users/' + userId + '/Course')
     return this.assignedCourseList;
-
   }
 
 }
