@@ -6,11 +6,10 @@
     "\\src\\app\\course",
     "\\src\\app\\course\\courseform",
     "\\src\\app\\course\\courselist",
-    "\\src\\app\\lecturer",
     "\\src\\app\\lecturer\\lecturerallcourselist",
     "\\src\\app\\lecturer\\lecturerprofile",
     "\\src\\app\\services"
   ],
-  "SelectedNode": "\\src\\app\\lecturer\\lecturerprofile\\lecturerprofile.component.ts",
+  "SelectedNode": "\\src\\app\\course\\courselist\\courselist.component.ts",
   "PreviewInSolutionExplorer": false
 }

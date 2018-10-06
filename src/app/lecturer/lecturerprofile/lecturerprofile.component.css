@@ -1,6 +1,6 @@
 .card {
   width: 240px;
-  height: 350px;
+  height: 300px;
   background: #fff;
   border-radius: 7px;
   overflow: hidden;
@@ -14,6 +14,7 @@
   text-decoration: none;
   margin: 5px;
 }
+
 
 .profilecard {
   width: 100%;
@@ -21,7 +22,25 @@
   background: #fff;
   border-radius: 7px;
   overflow: hidden;
-  display: flex;
+  box-shadow: 0 14px 26px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+}
+
+.main {
+  justify-content: center;
+  align-items: center;
+  width:100%;
+}
+
+
+
+.assigncoursecard {
+  width: 100%;
+  height: 150px;
+  background: #fff;
+  border-radius: 7px;
+  overflow: hidden;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -29,33 +48,27 @@
   box-shadow: 0 14px 26px rgba(0,0,0,0.1);
   transition: all 0.3s ease-out;
   text-decoration: none;
-  margin: 5px;
+}
+
+
+.card:hover {
+  transform: translateY(-10px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0,0,0,0.2), 0 24px 46px var(--box-shadow-color);
+  transition: transform .4s ease;
+}
+
+.card:hover .overlay {
+  transform: scale(5);
+  transition: transform 1s ease;
 }
 
 
 
-  .card:hover {
-    transform: translateY(-10px) scale(1.005) translateZ(0);
-    box-shadow: 0 24px 36px rgba(0,0,0,0.2), 0 24px 46px var(--box-shadow-color);
-    transition: transform .4s ease;
-  }
+.card:hover p {
+  color: rgb(0, 0, 0);
+  transform: scale(1.01);
+}
 
-    .card:hover .overlay {
-      transform: scale(5);
-      transition: transform 1s ease;
-    }
-
-
-
-    .card:hover p {
-      color: rgb(0, 0, 0);
-      transform: scale(1.1);
-    }
-
-  .card:active {
-    transform: scale(1) translateZ(0);
-    box-shadow: 0 15px 24px rgba(0,0,0,0.11), 0 15px 24px var(--box-shadow-color);
-  }
 
 .userName p {
   font-size: 15px;
@@ -75,18 +88,19 @@
   transition: color 0.3s ease-out;
 }
 
-
 .circle img {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
+  padding:5px;
+  margin:10px;
   box-shadow: 0 5px 14px rgba(0,0,0,0.3), 0 15px 24px rgba(0,0,0, 0.2);
+  background: #4CB8C4;
 }
 
-  .circle img[src=""] {
-    display: none;
-  }
-
+.circle img[src=""] {
+  display: none;
+}
 
 .overlay {
   width: 110px;

@@ -38,7 +38,6 @@ import { CourseService } from './services/course.service';
 import { LecturerService } from './services/lecturer.service';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
