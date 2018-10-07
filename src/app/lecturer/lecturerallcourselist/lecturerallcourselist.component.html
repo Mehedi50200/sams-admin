@@ -1,6 +1,6 @@
 <div class="row">
 
-  <div class="col-12 col-sm-5 col-lg-4 col-xl-3 ">
+  <div class="col-12 col-sm-5 col-lg-4 col-xl-4">
     <div class="confirmassigncourse collapse scene_element scene_element--fadein" id="confirmassign">
      
       <form #courseAssignForm="ngForm" (ngSubmit)="onAssign(courseAssignForm)">
@@ -29,7 +29,7 @@
 
 
         <div class="form-group">
-            <select class="custom-select mr-sm-2" id="day"  name="Day" #name="ngModel" [(ngModel)]="Day">
+            <select class="custom-select mr-sm-2" name="Day" #name="ngModel" [(ngModel)]="Day" id="day" placeholder="Time" required >
                 <option selected>Choose...</option>
                 <option value="Monday">Monday</option>
                 <option value="Tuesday">Tuesday</option>
@@ -46,14 +46,14 @@
           </div>
           <div class="input-group-append">
             <button class="yesbtn" type="submit" [disabled]="!courseAssignForm.valid" data-toggle="collapse" data-target="#confirmassign"
-                    aria-expanded="false" aria-controls="confirmassign">Assign Course</button>
+                    aria-expanded="false" aria-controls="confirmassign">Assign</button>
           </div>
         </div>
       </form>
     </div>
   </div>
 
-  <div class="col-12 col-sm-7 col-lg-8 col-xl-9">
+  <div class="col-12 col-sm-7 col-lg-8 col-xl-8 nopadding">
     <div class="main">
       <div class="coursewidget" *ngFor="let course of courseList" 
         data-toggle="collapse" data-target="#confirmassign"

@@ -30,7 +30,6 @@
   transition: transform 0.3s ease-out;
 }
 
-
 .coursewidget:hover .overlay {
   transform: scale(12);
   background: rgba(0, 0, 0, 0.2);
@@ -132,7 +131,7 @@
 }
 
 .yesbtn {
-  width: 120px;
+  width: 100px;
   background: linear-gradient(to left, #3CD3AD, #4CB8C4);
   border-radius: 0px 7px 7px 0px;
   border: 0px !important;
@@ -141,10 +140,27 @@
 }
 
 .nobtn {
-  width:120px;
+  width:100px;
   background: linear-gradient(to left, #EB3349, #F45C43);
   border-radius: 7px 0px 0px 7px;
   border: 0px !important;
   color: white;
   font-weight: 400;
+}
+
+
+button:disabled,
+button[disabled] {
+  background: #efefef;
+  color: #ffffff;
+  border: 1px solid #D1D1D1 !important;
+}
+
+input.ng-invalid.ng-dirty {
+  border: 1px solid red;
+}
+
+.nopadding{
+  padding: 0 !important;
+  margin: 0 !important;
 }

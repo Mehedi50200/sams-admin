@@ -1,7 +1,7 @@
 <div class="bodycontainer">
 
   <div class="main">
-    <a href="#" class="card scene_element scene_element--fadeinleft"
+    <a href="#" class="lecturercard "
        *ngFor="let lecturer of lecturerList"
        routerLink="/lecturer/{{lecturer.$key}}"
        (click)="onLecturerSelect(lecturer)" >
@@ -19,8 +19,6 @@
       
     </a>
   </div>
-
-  <app-lecturerallcourselist></app-lecturerallcourselist>
    
 </div>
 

@@ -4,6 +4,9 @@ import { LecturerService } from '../../services/lecturer.service';
 import { AssignedCourse } from '../lecturerassignedcourse';
 import { LecturerProfile } from './lecturerprofile';
 import { Observable } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
+import { NgForm } from '@angular/forms';
+
 
 
 @Component({
@@ -24,7 +27,7 @@ export class LecturerprofileComponent implements OnInit {
   
   
 
-  constructor(private route: ActivatedRoute, private lecturerService: LecturerService) { }
+  constructor(private route: ActivatedRoute, private lecturerService: LecturerService, private toastr: ToastrService) { }
 
   ngOnInit() {
 
@@ -58,4 +61,34 @@ export class LecturerprofileComponent implements OnInit {
         
   }  
 
+  onCourseUnasssigned(key: string) {
+    if (confirm('Are You Sure to Delete this Course') == true) {
+      this.lecturerService.deleteAssignedCourse(key);
+      this.toastr.success('Course Deleted Successfully', 'Course Deleted');
+    }
+  }
+
+  onCourseAsssignedEdit(asignedcrs: AssignedCourse) {
+    this.lecturerService.selectedAssignedCourse = Object.assign({},asignedcrs);
+  }
+
+  resetForm(form : NgForm){
+    if (form != null)
+      form.reset();
+
+    this.lecturerService.selectedAssignedCourse = {
+      $key : '',
+      CourseCode : '',
+      CourseName : '',
+      CourseCredit: '',
+      Day: '',
+      Time: '',
+    }
+  }
+
+  onUpdateAssignedCourse(form?: NgForm) {
+    this.lecturerService.updateAssignedCourse(form.value);
+    this.resetForm(form);
+    this.toastr.success('Course Updated Successfully', 'Course Updated');
+  }
 }

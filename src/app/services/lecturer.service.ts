@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList, AngularFireObject} from '@angular/fire/database';
 import { Lecturer } from '../lecturer/lecturer';
-import { LecturerProfile } from '../lecturer/lecturerprofile/lecturerprofile'
-import { Observable } from 'rxjs';
 import { Course } from '../course/course';
 import { AssignedCourse } from '../lecturer/lecturerassignedcourse';
+
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +19,7 @@ export class LecturerService {
 
   selectedLecturer: Lecturer = new Lecturer();
   selectedCourse: Course = new Course();
+  selectedAssignedCourse: AssignedCourse = new AssignedCourse();
 
   constructor(private db: AngularFireDatabase) { }
 
@@ -50,4 +50,20 @@ export class LecturerService {
       Time: course.Time,
     });
   }
+
+  updateAssignedCourse(course: AssignedCourse){
+    this.assignedCourseList.update(course.CourseCode,{
+      CourseName: course.CourseName,
+      CourseCredit: course.CourseCredit,
+    });
+    this.assignedCourseList.update('/'+ course.CourseCode+'/Routine',{
+      Day: course.Day,
+      Time: course.Time,
+    });
+  }
+
+  deleteAssignedCourse(key: string){
+    this.assignedCourseList.remove(key);
+  }
+
 }
