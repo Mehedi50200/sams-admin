@@ -12,7 +12,7 @@
             </div>
             <div class="col-6 col-md-4">
               <div class="userInfo">
-                <p> {{lecturerProf.userName}}</p>
+                <p><span style="color:dimgray; font-size:20px; font-weight:700 "> {{lecturerProf.userName}} </span> </p>
                 <p> {{lecturerProf.userEmail}}</p>
               </div>
             </div>  
@@ -31,47 +31,14 @@
   <div class="row collapse scene_element scene_element--fadein" id="assignnewcourse">
     <app-lecturerallcourselist></app-lecturerallcourselist>
   </div>
-     
+
   <div class="row">
-    <div class="main">
-      <div class="coursewidget" *ngFor="let assignedCourse of assignedCourseList">
-        <div class="row">
-      
-          <div class="col-3 button-grp">
-            <div class="button">
-              <a (click)="onCourseUnasssigned(assignedCourse.$key)"> <img src="../../assets/image/deletebtn.png"></a>
-            </div>
-            <div class="button">
-                <a (click)="onCourseAsssignedEdit(assignedCourse)" data-toggle="collapse" data-target="#collapsableAssignedCourseEditForm"
-                    aria-expanded="false" aria-controls="collapsableAssignedCourseEditForm"> <img src="../../assets/image/editbtn.png"></a>
-              </div>
-            <div class="courseimage">
-              <img src="{{assignedCourse.Url}}">
-            </div>
-          </div>
-      
-          <div class="col-9">
-            <div class="titlecontainer">
-              <div class="title"> 
-                <span style="font-weight:600;">{{assignedCourse.$key}}</span> &nbsp; 
-                <span>{{ assignedCourse.CourseName }}</span></div>
-              <div class="title"> 
-                <span style="font-weight:600;">Credit</span> &nbsp; 
-                <span>{{ assignedCourse.CourseCredit }}</span></div>
-              <div class="title">
-                <span> {{assignedCourse.Routine.Day}} </span>  &nbsp; 
-                <span> {{assignedCourse.Routine.Time}}</span></div>
-            </div>
-          </div>               
-
-
-        </div>        
+      <div class="sectionheader">
+          <h5>Assigned Courses</h5>
       </div>
-    </div>       
   </div>
 
-  <div class="row">
-    <div class="col-12 col-sm-4 col-md-6 col-lg-6 col-xl-8 nopadding"></div>
+  <div class="row assignupdate" >
     <div class="col-12 col-sm-8 col-md-6 col-lg-6 col-xl-4 nopadding">
       <div class="collapse scene_element scene_element--fadein" id="collapsableAssignedCourseEditForm">
         <div class="collapseform">
@@ -123,7 +90,7 @@
               </div>
               <div class="input-group-append">
                 <button class="yesbtn" type="submit" [disabled]="!editAssignedCourseForm.valid" data-toggle="collapse" data-target="#confirmassign"
-                        aria-expanded="false" aria-controls="collapsableAssignedCourseEditForm">Assign</button>
+                        aria-expanded="false" aria-controls="collapsableAssignedCourseEditForm">Update</button>
               </div>
             </div>
       
@@ -133,6 +100,46 @@
 
     </div>
   </div>
+     
+  <div class="row">
+    <div class="main">
+      <div class="coursewidget" *ngFor="let assignedCourse of assignedCourseList">
+        <div class="row">
+      
+          <div class="col-3 button-grp">
+            <div class="button">
+              <a (click)="onCourseUnasssigned(assignedCourse.$key)"> <img src="../../assets/image/deletebtn.png"></a>
+            </div>
+            <div class="button">
+                <a (click)="onCourseAsssignedEdit(assignedCourse)" data-toggle="collapse" data-target="#collapsableAssignedCourseEditForm"
+                    aria-expanded="false" aria-controls="collapsableAssignedCourseEditForm"> <img src="../../assets/image/editbtn.png"></a>
+              </div>
+            <div class="courseimage">
+              <img src="{{assignedCourse.Url}}">
+            </div>
+          </div>
+      
+          <div class="col-9">
+            <div class="titlecontainer">
+              <div class="title"> 
+                <span style="font-weight:600;">{{assignedCourse.$key}}</span> &nbsp; 
+                <span>{{ assignedCourse.CourseName }}</span></div>
+              <div class="title"> 
+                <span style="font-weight:600;">Credit</span> &nbsp; 
+                <span>{{ assignedCourse.CourseCredit }}</span></div>
+              <div class="title">
+                <span> {{assignedCourse.Routine.Day}} </span>  &nbsp; 
+                <span> {{assignedCourse.Routine.Time}}</span></div>
+            </div>
+          </div>               
+
+
+        </div>        
+      </div>
+    </div>       
+  </div>
+
+  
 
 </div>
 

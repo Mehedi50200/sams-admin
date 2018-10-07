@@ -1,10 +1,36 @@
+.sectionheader {
+  width:100%;
+  height: 50px;
+  margin: 25px;
+  border-radius: 6px 6px 0 0;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 2px #3CD3AD ;
+}
+
+.sectionend {
+  width:100%;
+  height: 2px;
+  margin: 30px;
+  box-shadow: -3px 4px 35px 10px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  border-bottom: solid 2px #3CD3AD ;
+}
+
 .btngroup {
   display: table;
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
 }
-
 
 .button {
   display: inline-block;
