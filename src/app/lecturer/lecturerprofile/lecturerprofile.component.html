@@ -2,39 +2,65 @@
   
   <div class="row">
     <div class="main">
-      <div class=" col-9">
+      <div class=" col-12 col-sm-9 col-md-9 col-lg-10 nopadding">
         <div class="profilecard" *ngFor="let lecturerProf of lecturerProfile">
-          <div class="circle">
-            <img src={{lecturerProf.userProfileImageUrl}} />
-          </div>
-          <div class="userName">
-            <p> {{lecturerProf.userName}}</p>
-            <p> {{lecturerProf.userEmail}}</p>
-          </div>
+          <div class="row">
+            <div class="col-4 col-md-4 col-lg-3 col-xl-2">
+              <div class="circle">
+                  <img src={{lecturerProf.userProfileImageUrl}} />
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="userInfo">
+                <p> {{lecturerProf.userName}}</p>
+                <p> {{lecturerProf.userEmail}}</p>
+              </div>
+            </div>  
+          </div>              
         </div>
       </div>
-      <div class="col-3">
-        <div class="assigncoursecard">
+      <div class="col-12 col-sm-3 col-md-3 col-lg-2 nopadding">
+        <div class="assigncoursecard"  
+          data-toggle="collapse" data-target="#assignnewcourse"
+          aria-expanded="false" aria-controls="assignnewcourse">
           <p>Assign New Course</p>
         </div>
       </div>
     </div>
   </div>
+  <div class="row collapse scene_element scene_element--fadein" id="assignnewcourse">
+    <app-lecturerallcourselist></app-lecturerallcourselist>
+  </div>
+     
   <div class="row">
     <div class="main">
-      <a href="#" class="card" *ngFor="let assignedCourse of assignedCourseList">
-        <div class="overlay"></div>
-        <div class="courseCode">
-          <p><span style="font-weight:700">{{assignedCourse.$key}}</span> {{assignedCourse.CourseName}} </p>
-        </div>
-        <div class="day">
-          <p>{{assignedCourse.Routine.Day}}</p>
-        </div>
-        <div class="time">
-          <p>{{assignedCourse.Routine.Time}}</p>
-        </div>
-      </a>
-   </div>
+      <div class="coursewidget" *ngFor="let assignedCourse of assignedCourseList">
+        <div class="row">
+      
+          <div class="col-3">
+            <div class="courseimage">
+              <img src="{{assignedCourse.Url}}">
+            </div>
+          </div>
+      
+          <div class="col-9">
+            <div class="titlecontainer">
+              <div class="title"> 
+                <span style="font-weight:600;">{{assignedCourse.$key}}</span> &nbsp; 
+                <span>{{ assignedCourse.CourseName }}</span></div>
+              <div class="title"> 
+                <span style="font-weight:600;">Credit</span> &nbsp; 
+                <span>{{ assignedCourse.CourseCredit }}</span></div>
+              <div class="title">
+                <span> {{assignedCourse.Routine.Day}} </span>  &nbsp; 
+                <span> {{assignedCourse.Routine.Time}}</span></div>
+            </div>
+          </div>
+
+        </div>  
+        <div class="overlay"></div>        
+      </div>
+    </div>
   </div>
 
   <div class="row">

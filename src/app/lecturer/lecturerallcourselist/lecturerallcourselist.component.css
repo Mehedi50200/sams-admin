@@ -19,19 +19,22 @@
 }
 
 .overlay {
+  width: 110px;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.0);
-  transition: background 0.5s ease;
-  border-radius: 7px;
+  height: 110px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0);
+  top: 13px;
+  left: 40%;
+  z-index: -1;
+  transition: transform 0.3s ease-out;
 }
 
+
 .coursewidget:hover .overlay {
-  display: block;
-  background: rgba(255, 255, 255, 0.1);
+  transform: scale(12);
+  background: rgba(0, 0, 0, 0.2);
+  transition: transform 1s ease;
 }
 
 
@@ -44,6 +47,7 @@
   border-radius: 6px;
   background: linear-gradient(to left, #3CD3AD, #4CB8C4);
   position: relative;
+  overflow: hidden;
 }
 
 
@@ -105,4 +109,42 @@
   color: white;
   text-align: center;
   border-radius: 7px 7px 0px 0px;
+}
+
+.collapse{
+  flex-basis: 300px;
+  flex-grow: 10;
+  height: 320px;
+  margin: 10px;
+  box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background: #fff; 
+  position: relative;
+  padding:10px;
+}
+
+.twobtn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.yesbtn {
+  width: 120px;
+  background: linear-gradient(to left, #3CD3AD, #4CB8C4);
+  border-radius: 0px 7px 7px 0px;
+  border: 0px !important;
+  color: white;
+  font-weight: 400;
+}
+
+.nobtn {
+  width:120px;
+  background: linear-gradient(to left, #EB3349, #F45C43);
+  border-radius: 7px 0px 0px 7px;
+  border: 0px !important;
+  color: white;
+  font-weight: 400;
 }

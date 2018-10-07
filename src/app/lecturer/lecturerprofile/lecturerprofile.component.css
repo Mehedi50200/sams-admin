@@ -15,6 +15,17 @@
   margin: 5px;
 }
 
+.userInfo{
+  flex-direction: column;
+  align-items: center;
+  margin-top:20px; 
+}
+
+
+.nopadding {
+  padding: 5px !important;
+  margin: 0 !important;
+}
 
 .profilecard {
   width: 100%;
@@ -27,13 +38,19 @@
   text-decoration: none;
 }
 
+
+.circle img{
+  border-radius:50%;
+  height: 120px; 
+  margin: 15px;
+  box-shadow: 3px 1px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
 .main {
   justify-content: center;
   align-items: center;
   width:100%;
 }
-
-
 
 .assigncoursecard {
   width: 100%;
@@ -41,6 +58,7 @@
   background: #fff;
   border-radius: 7px;
   overflow: hidden;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -50,56 +68,22 @@
   text-decoration: none;
 }
 
+.coursewidget {
+  flex-basis: 220px;
+  flex-grow: 10;
+  height: 140px;
+  margin: 10px;
+  box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;  
+  background: linear-gradient(to left, #3CD3AD, #4CB8C4);
+  position: relative;
+  overflow: hidden;
+}
 
-.card:hover {
-  transform: translateY(-10px) scale(1.005) translateZ(0);
-  box-shadow: 0 24px 36px rgba(0,0,0,0.2), 0 24px 46px var(--box-shadow-color);
+.coursewidget:hover {
+  transform: translateY(-7px) scale(1.005);
+  box-shadow: 0 14px 26px rgba(0,0,0,0.2);
   transition: transform .4s ease;
-}
-
-.card:hover .overlay {
-  transform: scale(5);
-  transition: transform 1s ease;
-}
-
-
-
-.card:hover p {
-  color: rgb(0, 0, 0);
-  transform: scale(1.01);
-}
-
-
-.userName p {
-  font-size: 15px;
-  font-weight: 500;
-  color: #4C5656;
-  margin-top: 10px;
-  z-index: 1000;
-  transition: color 0.3s ease-out;
-}
-
-.userEmail p {
-  font-size: 12px;
-  font-weight: 300;
-  color: rgb(0, 0, 0);
-  margin-top: 0px;
-  z-index: 1000;
-  transition: color 0.3s ease-out;
-}
-
-.circle img {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  padding:5px;
-  margin:10px;
-  box-shadow: 0 5px 14px rgba(0,0,0,0.3), 0 15px 24px rgba(0,0,0, 0.2);
-  background: #4CB8C4;
-}
-
-.circle img[src=""] {
-  display: none;
 }
 
 .overlay {
@@ -107,9 +91,66 @@
   position: absolute;
   height: 110px;
   border-radius: 50%;
-  background: linear-gradient(to left, #3CD3AD, #4CB8C4);
-  top: 10px;
-  left: 60px;
+  background: rgba(0,0,0,0);
+  top: 13px;
+  left: 40%;
   z-index: -1;
   transition: transform 0.3s ease-out;
 }
+
+
+.coursewidget:hover .overlay {
+  transform: scale(5);
+  background: rgba(0, 0, 0, 0.2);
+  transition: transform 1s ease;
+}
+
+
+.courseimage {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  vertical-align: central;
+}
+
+.courseimage img {
+  display: inline-block;
+  height: 60px;
+  width: 60px;  
+  border-radius: 50%; 
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  vertical-align: central;
+  border-radius: 50%;
+  box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
+}
+
+.coursewidget img[src=""] {
+  display: none;
+}
+
+.coursewidget:hover {
+  font-weight: 700;
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 14px 26px rgba(0,0,0,0.2);
+  transition: transform .4s ease;
+}
+
+.titlecontainer {
+  padding: 8px;
+  font-weight: 400;
+  height: 140px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 0px 7px 7px 0px;
+}
+
+.title {
+  padding: 5px;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+

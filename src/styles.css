@@ -6,8 +6,8 @@ body{
 body::-webkit-scrollbar { width:0 !important; }
 
 .bodycontainer{
-  padding-left:0%;
-  padding-right:0%;
+  padding-left:1.5%;
+  padding-right:1.5%;
   width:100%;
 }
 
@@ -153,9 +153,8 @@ button :focus{
 /* set element styles for desktop */
 @media screen and (min-width: 900px) {
     .bodycontainer{
-      padding-left:10%;
-      padding-right:10%;
-      width:100%;
+      padding-left:12%;
+      padding-right:12%;
     }
     
     .redgradientwidget {

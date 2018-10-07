@@ -2,32 +2,28 @@
   <div class="coursewidget" *ngFor="let course of courseList">
     <div class="row">
 
-      <div class="col-3">
+      <div class="col-3 courseimage nopadding">
         <div class="courseimage">
           <img src="{{course.Url}}">
         </div>
       </div>
 
-      <div class="col-7">
+      <div class="col-6 nopadding">
         <div class="titlecontainer">
           <div class="title"> <span style="font-weight:600;">{{ course.CourseCode }}</span> &nbsp; <span>{{ course.CourseName }}</span></div>
           <div class="title"> <span style="font-weight:600;">Credit</span> &nbsp; <span>{{ course.CourseCredit }}</span></div>
         </div>
       </div>
 
-      <div class="col-2">
-        <div class="row">
-          <div class="button">
-            <a (click)="onDelete(course.$key)"> <img src="../../assets/image/deletebtn.png"></a>
-          </div>
+      <div class="col-3 button nopadding">
+        <div class="button">
+          <a (click)="onDelete(course.$key)"> <img src="../../assets/image/deletebtn.png"></a>
         </div>
-        <div class="row">
-          <div class="button" data-toggle="collapse"
-               data-target="#collapsableEditForm"
-               aria-expanded="false" aria-controls="collapsableEditForm">
-            <a (click)="onEdit(course)"> <img src="../../assets/image/editbtn.png"></a>
-          </div>
-        </div>        
+        <div class="button" data-toggle="collapse"
+              data-target="#collapsableEditForm"
+              aria-expanded="false" aria-controls="collapsableEditForm">
+          <a (click)="onEdit(course)"> <img src="../../assets/image/editbtn.png"></a>
+        </div>            
       </div>
     </div>
     

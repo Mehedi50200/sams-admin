@@ -29,7 +29,6 @@ export class LecturerprofileComponent implements OnInit {
   ngOnInit() {
 
     this.routeSub = this.route.params.subscribe(params => {
-      console.log(params);
       this.userId = params['userid'];
 
     });
@@ -40,8 +39,6 @@ export class LecturerprofileComponent implements OnInit {
     p.snapshotChanges().subscribe(action => {
       //  console.log(action.type);
       this.lecturerProfile = [];
-      console.log(action.key)
-      console.log(action.payload.val())
       var q = action.payload.toJSON();
       this.lecturerProfile.push(q as LecturerProfile);
       
