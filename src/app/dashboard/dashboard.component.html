@@ -1,24 +1,43 @@
+<app-header></app-header>
 <div class="bodycontainer">
 	<div class="main">
-		<div class="redgradientwidget scene_element scene_element--fadeinleft">
-			<div class= "titlecontainer">
-				<div class="title">Lecturer</div>		  
+		<div class="redgradientwidget scene_element scene_element--fadeinleft" routerLink="/lecturer">
+			<div class="row">
+				<div class="col-4">
+					<div class= "titlecontainer">
+						<div class="title">Lecturer</div>		  
+					</div>
+				</div>
+				<div class="col-8 image-container">
+					<img src ="../../assets/image/lecturers.png">
+				</div>
 			</div>
-			<img src ="../../assets/image/lecturers.png">
 		</div>
 
-		<div class="bluegradientwidget scene_element scene_element--fadeinup">
-			<div class= "titlecontainer">
-				<div class="title">Course</div>		  
-			</div>
-			<img src ="../../assets/image/courses.png">
+		<div class="bluegradientwidget scene_element scene_element--fadeinup" routerLink="/course">
+			<div class="row">
+				<div class="col-4">
+					<div class= "titlecontainer">
+						<div class="title">Course</div>		  
+					</div>
+				</div>
+				<div class="col-8 image-container">
+					<img src ="../../assets/image/courses.png">
+				</div>
+			</div>			
 		</div>
 
-		<div class="yellowgradientwidget scene_element scene_element--fadeinright">
-			 <div class= "titlecontainer">
-					<div class="title">Students</div>
-			 </div>
-			<img src ="../../assets/image/students.png">
+		<div class="yellowgradientwidget scene_element scene_element--fadeinright" routerLink="/student">
+			<div class="row">
+				<div class="col-4">
+					<div class= "titlecontainer">
+						<div class="title">Students</div>		  
+					</div>
+				</div>
+				<div class="col-8 image-container">
+					<img src ="../../assets/image/students.png">
+				</div>
+			</div>					
 		</div>
 	</div>
 

@@ -106,46 +106,50 @@ button :focus{
   outline:0 !important;
 }
 
+.image-container{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;	
+}
+
+.image-container img{
+  width:80%;
+}
 
 .redgradientwidget {
-    flex-basis: 300px;
-    flex-grow: 10;
-    height: 250px;
-    margin: 1%;
-    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    background: linear-gradient(to left, #EB3349, #F45C43);      
-    position: relative;
+  flex-basis: 300px;
+  flex-grow: 10;
+  height: 250px;
+  margin: 7px;
+  box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background: linear-gradient(to left, #EB3349, #F45C43);      
+  position: relative;
 }
 
 .bluegradientwidget {
-    flex-basis: 300px;
-    flex-grow: 10;
-    height: 250px;
-    margin: 1%;
-    border-radius: 6px;
-    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(to left, #3CD3AD, #4CB8C4); 
-    position: relative;
+  flex-basis: 300px;
+  flex-grow: 10;
+  height: 250px;
+  margin: 7px;
+  border-radius: 6px;
+  box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to left, #3CD3AD, #4CB8C4); 
+  position: relative;
 }
 
 .yellowgradientwidget {
-    flex-basis: 300px;
-    flex-grow: 10;
-    height: 250px;
-    margin: 1%;
-    border-radius: 6px;
-    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(to left, #ffc522, #ffa751); 
-    position: relative;
-}
-
-.redgradientwidget img, .bluegradientwidget img, .yellowgradientwidget img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
-    margin-top: 20px;
+  flex-basis: 300px;
+  flex-grow: 10;
+  height: 250px;
+  margin: 7px;
+  border-radius: 6px;
+  box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to left, #ffc522, #ffa751); 
+  position: relative;
 }
 
 
@@ -156,48 +160,6 @@ button :focus{
       padding-left:12%;
       padding-right:12%;
     }
-    
-    .redgradientwidget {
-        flex-basis: 200px;
-        flex-grow: 10;
-        height: 260px;
-        margin: 1%;
-        box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
-        border-radius: 6px;
-        background: linear-gradient(to left, #EB3349, #F45C43); 
-        position: relative;
-    }
-
-    .bluegradientwidget {
-        flex-basis: 200px;
-        flex-grow: 10;
-        height: 260px;
-        margin: 1%;
-        box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
-        border-radius: 6px;
-        background: linear-gradient(to left, #3CD3AD, #4CB8C4);         
-        position: relative;
-    }
-
-    .yellowgradientwidget {
-        flex-basis: 200px;
-        flex-grow: 10;
-        height: 260px;
-        margin: 1%;
-        box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
-        border-radius: 6px;
-        background: linear-gradient(to left, #ffc522, #ffa751); 
-        position: relative;
-    }
-
-    .redgradientwidget img, .bluegradientwidget img, .yellowgradientwidget img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 250px;
-        margin-top: 40px;
-    }
-
 }
 
 /* main box container */
@@ -207,50 +169,31 @@ button :focus{
     flex-flow: row wrap;
 }
 
-.redgradientwidget:hover img, .bluegradientwidget:hover img, .yellowgradientwidget:hover img {
-    transform: scale(1.1);
-}
-
-.redgradientwidget:hover{
-    box-shadow: -1px 1px 30px 5px rgba(235, 51, 73, 0.6);   
-    font-weight: 700;
-}
-
-.bluegradientwidget:hover{
-    box-shadow: -1px 1px 30px 5px rgba(60, 211, 173, 0.6);
-    font-weight: 700;
-}
-
-.yellowgradientwidget:hover{
-    box-shadow: -1px 1px 30px 5px rgba(202, 197, 49, .6);
-    font-weight: 700;
-}
-
-.redgradientwidget:hover .title, .bluegradientwidget:hover .title, .yellowgradientwidget:hover .title{
-    font-weight: 700;
-}
-
-.redgradientwidget:hover img .bluegradientwidget:hover img, .yellowgradientwidget:hover img {
-    transform: scale(1.2); 
-}
-
-
 .title {
-    padding:5px;
     font-weight: 400;
     font-size: 14px;    
     color: white;
     text-align: center;
-    border-radius: 7px 7px 0px 0px;
+    font-size: 30px;
+    
 }
-
 
 .titlecontainer {
-    padding:8px;
+    height: 250px;
     font-weight: 400;
-    box-shadow: 0px 8px 15px -2px rgba(0, 0, 0, 0.3);
-    border-radius: 7px 7px 0px 0px;
+    box-shadow:  5px 0px 18px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 7px 0px 0px 7px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
 }
 
-
-
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}

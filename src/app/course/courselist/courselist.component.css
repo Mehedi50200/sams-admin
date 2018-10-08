@@ -58,30 +58,30 @@
 }
 
 .coursewidget:hover {
-  transform: translateY(-3px) scale(1.015);
-  box-shadow: -1px 1px 30px 5px rgba(0, 51, 73, 0.6);
+  transform: translateY(-5px);
+  box-shadow: -1px 1px 30px 5px rgba(0, 51, 73, 0.4);
   font-weight: 700;
   transition: transform 0.3s ease;
 }
 
 
 .overlay {
-  width: 110px;
+  width: 100px;
+  height: 100px;
+  left:40%;
+  border-radius:50%; 
   position: absolute;
-  height: 110px;
-  border-radius: 50%;
-  background: rgba(0,0,0,0);
   top: 13px;
-  left: 40%;
   z-index: -1;
-  transition: transform 0.3s ease-out;
+  transition: transform 0.5s ease-out;
 }
 
 
 .coursewidget:hover .overlay {
-  transform: scale(12);
-  background: rgba(0, 0, 0, 0.2);
+  transform: scale(10);
+  background: rgba(0,0,0,.2);
   transition: transform 1s ease;
+  background: linear-gradient(to left, rgb(40, 216, 172), rgb(48, 155, 167));
 }
 
 .coursewidget:hover .button{
@@ -132,7 +132,7 @@
 
 .card:hover {
   transform: translateY(-10px) scale(1.005) translateZ(0);
-  box-shadow: 0 24px 36px rgba(0,0,0,0.2), 0 24px 46px var(--box-shadow-color);
+  box-shadow: 0 24px 36px rgba(0,0,0,0.2);
   transition: transform .4s ease;
 }
 

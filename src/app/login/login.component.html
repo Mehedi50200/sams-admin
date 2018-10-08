@@ -1,53 +1,32 @@
-<div class="bodycontainer">
-  <div class="container-fluid">
-    <div class="row" id = "login-form">
-      <div  class="col-md-12 scene_element--fadein">
-        <div class="row">
-
-          <div id="login-imagebox" class="col-md-6 scene_element scene_element--fadeinleft" >
-
-            <div id ="p1">
-              <p>Student Attendance Monitoring System</p>
-            </div>
-            <div id ="p2">
-              <p>"let's make attendance monitoring easy"</p>
-            </div>          
-            <img src ="../../assets/image/loginformimage.png">
-
-          </div>        
-
-          <div id ="login-formbox" class="col-md-6 scene_element scene_element--fadeinright">
-
-            <form (submit) ="loginUser($event)" autofill="off">
-              <img src ="../../assets/image/logo.png">
-              <div class="row">
-                <div class="col-md-2">          
-                </div>
-                <div class="col-md-8">
-                  <div class="inputgroup">
-                    <div class="col-md-12">
-                      <input type="email" id="inputEmail3" placeholder="Email">
-                    </div>
-
-                    <div  class="col-md-12">
-                        <input type="password" id="inputPassword3" placeholder="Password">
-                    </div>
-
-                    <div class="col-md-12">
-                        <input type="submit" value= "Login">
-                    </div>
-                    <div  class="col-md-12">
-                        <button class="forgetpass"> Forget Password </button>
-                    </div>
-                  </div>      
-                </div>
-              </div>
-                            
-            </form>
-
-          </div>
-        <div>
-        </div>
+<div class="row">
+  <div  class="col-md-6 col-lg-6 scene_element--fadein">
+    <div class = "imagebox">       
+      <div id ="p1">
+        <p>Student Attendance Monitoring System</p>
       </div>
+      <div id ="p2">
+        <p>"let's make attendance monitoring easy"</p>
+      </div>          
+      <img src ="../../assets/image/loginformimage.png">
+    </div> 
+  </div>  
+  <div  class="col-md-6 col-lg-6 scene_element--fadein">
+    <div class = "formbox">
+      <form (submit) ="loginUser($event)" autofill="off">
+        <img src ="../../assets/image/logo.png">   
+        <div class="form-group row input-element">
+          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+        </div>
+        <div class="form-group row input-element">             
+          <input type="password" class="form-control" id="inputPassword3" placeholder="Password">             
+        </div>   
+        <div class="form-group row input-element">             
+          <input type="submit" class="form-control" value="Login" placeholder="Login">      
+        </div>
+        <div class="form-group row input-element">             
+          <a href="#"> Forgot Password </a>           
+        </div>           
+      </form>
     </div>
-  </div>
+  <div>
+</div> 

@@ -1,6 +1,6 @@
 <div class="row">
   <div class="sectionheader">
-      <h5> Assign new Course</h5>
+    <h5> <span style="color:dimgray">Assign new Course</span></h5>
   </div>
 </div>
 
@@ -10,47 +10,46 @@
       <form #courseAssignForm="ngForm" (ngSubmit)="onAssign(courseAssignForm)">
         <div class="form-group">
           <input type="text" class="form-control"
-                  name="CourseCode" #name="ngModel" [(ngModel)]="lecturerService.selectedCourse.CourseCode"
-                  id="coursecode" placeholder="Course Code" required>
+              name="CourseCode" #name="ngModel" [(ngModel)]="lecturerService.selectedCourse.CourseCode"
+              id="coursecode" placeholder="Course Code" required>
         </div>
     
         <div class="form-group">
           <input type="text" class="form-control"
-                  name="CourseName" #name="ngModel" [(ngModel)]="lecturerService.selectedCourse.CourseName"
-                  id="coursename" placeholder="Course Name" required>
+              name="CourseName" #name="ngModel" [(ngModel)]="lecturerService.selectedCourse.CourseName"
+              id="coursename" placeholder="Course Name" required>
         </div>
     
         <div class="form-group">
           <input type="text" class="form-control" 
-                  name="CourseCredit" #name="ngModel" [(ngModel)]="lecturerService.selectedCourse.CourseCredit" 
-                  id="coursecredit" placeholder="Course Credit" required>
+              name="CourseCredit" #name="ngModel" [(ngModel)]="lecturerService.selectedCourse.CourseCredit" 
+              id="coursecredit" placeholder="Course Credit" required>
         </div>
 
         <div class="form-group">
             <input type="text" class="form-control" name="Time" #name="ngModel" [(ngModel)]="Time"
-                  id="time" placeholder="Time" required>
+              id="time" placeholder="Time" required>
         </div>
-
 
         <div class="form-group">
           <select class="custom-select mr-sm-2" name="Day" #name="ngModel" [(ngModel)]="Day" id="day" placeholder="Time" required >
-              <option selected>Choose...</option>
-              <option value="Monday">Monday</option>
-              <option value="Tuesday">Tuesday</option>
-              <option value="WednesDay">Wednecday</option>
-              <option value="Thursday">Thursday</option>
-              <option value="Frinday">Frinday</option>
+            <option selected>Choose...</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="WednesDay">Wednecday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Frinday">Frinday</option>
           </select>
         </div>
     
         <div class="input-group twobtn" >
           <div class="input-group-append">
               <button class="nobtn" type="button" data-toggle="collapse" data-target="#confirmassign"
-                      aria-expanded="false" aria-controls="confirmassign">Cancel</button>
+                aria-expanded="false" aria-controls="confirmassign">Cancel</button>
           </div>
           <div class="input-group-append">
             <button class="yesbtn" type="submit" [disabled]="!courseAssignForm.valid" data-toggle="collapse" data-target="#confirmassign"
-                    aria-expanded="false" aria-controls="confirmassign">Assign</button>
+                aria-expanded="false" aria-controls="confirmassign">Assign</button>
           </div>
         </div>
       </form>
@@ -74,11 +73,9 @@
               <div class="title"> <span style="font-weight:600;">Credit</span> &nbsp; <span>{{ course.CourseCredit }}</span></div>
             </div>
           </div>
-        </div>      
-        <div class="overlay"></div>    
+        </div>  
       </div>
     </div>    
   </div>  
-
  
 </div>
