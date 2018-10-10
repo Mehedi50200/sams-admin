@@ -63,6 +63,7 @@
 .assigncoursecard p{
   display: none;
   font-size: 12px;
+  margin-top: 20px;
   background: transparent;
 }
 
