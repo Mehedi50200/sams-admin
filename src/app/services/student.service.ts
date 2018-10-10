@@ -22,6 +22,7 @@ export class StudentService {
       StudentMatric: student.StudentMatric,
       StudentName: student.StudentName,
       StudentProgram: student.StudentProgram,
+      StudentProfileImageUrl: student.StudentProfileImageUrl,
     });
   }
 

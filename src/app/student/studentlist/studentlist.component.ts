@@ -3,6 +3,7 @@ import { StudentService } from '../../services/student.service';
 import { Student } from '../student';
 import { ToastrService } from 'ngx-toastr';
 
+
 @Component({
   selector: 'app-studentlist',
   templateUrl: './studentlist.component.html',
@@ -10,7 +11,6 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class StudentlistComponent implements OnInit {
   studentList: Student[];   
-
   constructor(private studentService: StudentService, private toastr: ToastrService) { }
 
   ngOnInit() {
@@ -40,5 +40,4 @@ export class StudentlistComponent implements OnInit {
   onEdit(student: Student) {
     this.studentService.selectedStudent= Object.assign({},student);
   }
-
 }

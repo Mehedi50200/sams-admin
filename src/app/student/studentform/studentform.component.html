@@ -17,6 +17,8 @@
       </div>
     </div>
     
+    <!---------------------------------------- Add Form ------------------------------------------>
+
     <div class="collapse scene_element scene_element--fadein" id="collapsableStudentForm">
       <form #studentAddForm="ngForm" (ngSubmit)="onStudentSubmit(studentAddForm)">
         <div class="form-group">
@@ -35,11 +37,10 @@
           <input type="text" class="form-control"
                   name="StudentName" #name="ngModel" [(ngModel)]="studentService.selectedStudent.StudentName"
                   placeholder="Student Name" required>
-        </div>
+        </div>        
   
         <div class="form-group">
           <select class="custom-select mr-sm-2" name="StudentProgram" #name="ngModel" [(ngModel)]="studentService.selectedStudent.StudentProgram" required >
-            <option selected>Choose Program Name</option>
             <option value="Computational Science">Computational Science</option>
             <option value="Information System">Information System</option>
             <option value="Multimedia Computing">Multimedia Computing</option>
@@ -47,18 +48,37 @@
             <option value="Network Computing">Network Computing</option>
           </select>
         </div>
-  
+        
+        <div class="form-group" *ngIf="downloadURL | async; let downloadSrc">
+          <input type="hidden" class="form-control imageurl"
+                  name="StudentProfileImageUrl" #name="ngModel" ngModel= {{downloadSrc}}
+                  placeholder="File Url">
+        </div>
+                
         <div class="input-group">
+          <!-- (change)="selectFile($event)"
+          <span> {{ pct | number }}% </span>   -->
           <div class="custom-file">
-            <input type="file" class="custom-file-input" id="StudentPic">
+            <input type="file" (change)="startUpload($event.target.files)" accept=".png,.jpg"
+                  [disabled]="!studentAddForm.valid"
+                  class="custom-file-input" id="StudentPic">
             <label class="custom-file-label" for="StudentPic">Choose image</label>
           </div>
           <div class="input-group-append">
-            <button class="addbtn" type="submit" [disabled]="!studentAddForm.valid"
-                    data-toggle="collapse" data-target="#collapsableStudentForm"
-                    aria-expanded="false" aria-controls="collapsableStudentForm">Add Student</button>
+            <button class="addbtn" type="submit" [disabled]="!studentAddForm.valid" 
+                data-toggle="collapse" data-target="#collapsableStudentForm"
+                aria-expanded="false" aria-controls="collapsableStudentForm">Add Student</button>
+          </div>         
+        </div>
+
+        <div class="input-group">
+          <div class="progressbar">
+            <div *ngIf="percentage | async as pct">
+              <progress class="progressbar" [value]="pct" max="100"></progress>                      
+            </div>  
           </div>
         </div>
+   
       </form>
     </div>
   
@@ -79,7 +99,9 @@
         </div>
       </div>
     </div>
-  
+
+  <!---------------------------------------- Edit Form ------------------------------------------>
+
     <div class="collapse scene_element scene_element--fadein" id="collapsableStudentEditForm">
       <form #studentEditForm="ngForm" (ngSubmit)="onStudentUpdate(studentEditForm)">
         <div class="form-group">
@@ -93,6 +115,12 @@
                   name="StudentMatric" #name="ngModel" [(ngModel)]="studentService.selectedStudent.StudentMatric"
                   placeholder="Student Matric" required>
         </div>
+
+        <div class="form-group">
+          <input type="hidden" class="form-control"
+                  name="StudentProfileImageUrl" #name="ngModel" [(ngModel)]="studentService.selectedStudent.StudentProfileImageUrl"
+                  placeholder="File Url" >
+        </div>
   
         <div class="form-group">
           <input type="text" class="form-control"
@@ -102,7 +130,6 @@
     
         <div class="form-group">
           <select class="custom-select mr-sm-2" name="StudentProgram" #name="ngModel" [(ngModel)]="studentService.selectedStudent.StudentProgram" required >
-            <option selected>Choose Program Name</option>
             <option value="Computational Science">Computational Science</option>
             <option value="Information System">Information System</option>
             <option value="Multimedia Computing">Multimedia Computing</option>
@@ -110,21 +137,35 @@
             <option value="Network Computing">Network Computing</option>
           </select>
         </div>
+
+        <div class="form-group" *ngIf="downloadURL | async; let downloadSrc">
+          <input class="form-control"
+                  name="StudentProfileImageUrl" #name="ngModel" ngModel= {{downloadSrc}}
+                  placeholder="File Url" required >
+        </div>
+
+        <div class="progressbar">
+          <div *ngIf="percentage | async as pct">
+            <progress class="progressbar" [value]="pct" max="100"></progress><span> {{ pct | number }}% </span>     
+                      
+          </div>  
+        </div>
   
         <div class="input-group">
+          <!-- (change)="selectFile($event)" -->
           <div class="custom-file">
-            <input type="file" class="custom-file-input"
-                    id="StudentPic">
+            <input type="file" (change)="startUpload($event.target.files)" accept=".png,.jpg"
+                  [disabled]="!studentAddForm.valid"
+                  class="custom-file-input" id="StudentPic">
             <label class="custom-file-label" for="StudentPic">Choose image</label>
           </div>
-  
           <div class="input-group-append">
             <button class="addbtn" type="submit" [disabled]="!studentEditForm.valid"
                     data-toggle="collapse" data-target="#collapsableStudentEditForm"
-                    aria-expanded="false" aria-controls="collapsableStudentEditForm">Update Student</button>
-          </div>
+                    aria-expanded="false" aria-controls="collapsableStudentEditForm"> Update </button>
+          </div>    
         </div>
-  
+
       </form>
     </div>
   

@@ -1,32 +1,45 @@
 <div class="main">
-    <div class="coursewidget" *ngFor="let student of studentList">
-      <div class="row">
-  
-        <div class="col-3 courseimage nopadding">
-          <div class="courseimage">
-            <img src="{{student.Url}}">
+  <a class="studentcard "
+    *ngFor="let student of studentList" >
+    <div class="overlay"></div>
+
+    <div class="row rowcenter">
+        <div class="col-2 nopadding">
+          <div class="circle">
+            <img src={{student.StudentProfileImageUrl}} />
           </div>
         </div>
-  
-        <div class="col-6 nopadding">
-          <div class="titlecontainer">
-            <div class="title"> <span style="font-weight:600;">{{ student.StudentMatric }}</span> &nbsp; <span>{{ student.StudentName }}</span></div>
-            <div class="title"> <span style="font-weight:600;">Credit</span> &nbsp; <span>{{ student.StudentProgram }}</span></div>
+
+        <div class="col-1 nopadding">
+          <div class="matric">
+            <p> {{student.StudentMatric}}</p>
+          </div>          
+        </div>
+
+        <div class="col-3 nopadding">
+          <div class="name">
+            <p>{{student.StudentName }}</p>
           </div>
         </div>
-  
-        <div class="col-3 button nopadding">
+
+        <div class="col-3 nopadding">
+          <div class="program">
+              <p> {{student.StudentProgram}}</p>
+            </div>          
+        </div>
+        
+        <div class="col-3 opadding">
           <div class="button">
             <a (click)="onDelete(student.$key)"> <img src="../../assets/image/deletebtn.png"></a>
-          </div>
+          </div> 
           <div class="button" data-toggle="collapse"
-                data-target="#collapsableStudentEditForm"
-                aria-expanded="false" aria-controls="collapsableEditForm">
+              data-target="#collapsableStudentEditForm"
+              aria-expanded="false" aria-controls="collapsableEditForm">
             <a (click)="onEdit(student)"> <img src="../../assets/image/editbtn.png"></a>
-          </div>            
+          </div>               
         </div>
-      </div>
-      <div class="overlay"></div> 
     </div>
-  </div>
+    
+  </a>
+</div>
   

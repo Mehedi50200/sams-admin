@@ -1,11 +1,11 @@
-.nopadding{
+  .nopadding{
     padding: 0 !important;
     margin: 0 !important;
   }
   .collapse{
     flex-basis: 300px;
     flex-grow: 10;
-    height: 260px;
+    height: 300px;
     margin: 10px;
     box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
@@ -109,6 +109,30 @@
     border: 1px solid #D1D1D1 !important;
   }
 
+  button:disabled:hover,
+  button[disabled] {
+    background: #efefef;
+    color: #ffffff;
+    border: 1px solid #D1D1D1 !important;
+    box-shadow: none;
+  }
+
   input.ng-invalid.ng-dirty {
     border: 1px solid red;
+  }
+
+  input[type=file]:disabled,
+  input[type=file][disabled] {
+    background: #efefef !important;
+    color: #ffffff !important;
+    border: 1px solid #D1D1D1 !important;
+  }
+
+  .progressbar{
+    width: 300px !important;
+    height: 10px;
+    margin-top: 10px !important;
+  }
+  .imageurl{
+    display: none;
   }

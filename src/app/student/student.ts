@@ -3,6 +3,6 @@ export class Student{
     StudentMatric: string;
     StudentName: string;
     StudentProgram: string;
-    Url: string;
+    StudentProfileImageUrl: string;
   }
   
