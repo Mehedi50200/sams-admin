@@ -1,0 +1,133 @@
+<div class="main nopdding">
+    <div class="addwidget scene_element scene_element--fadeinright"
+         data-toggle="collapse" data-target="#collapsableStudentForm"
+         aria-expanded="false" aria-controls="collapsableStudentForm">
+  
+      <div class="row">
+        <div class="col-4 addimage">
+          <div class="addimage">
+            <img src="../../assets/image/add.png">
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="titlecontainer">
+            <div class="title">Add New Student</div>        
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="collapse scene_element scene_element--fadein" id="collapsableStudentForm">
+      <form #studentAddForm="ngForm" (ngSubmit)="onStudentSubmit(studentAddForm)">
+        <div class="form-group">
+          <input type="hidden" class="form-control"
+                  name="$key" #name="ngModel" [(ngModel)]="studentService.selectedStudent.$key"
+                  placeholder="Course Code" >
+        </div>
+  
+        <div class="form-group">
+          <input type="text" class="form-control"
+                  name="StudentMatric" #name="ngModel" [(ngModel)]="studentService.selectedStudent.StudentMatric"
+                  placeholder="Student Matric" required>
+        </div>
+  
+        <div class="form-group">
+          <input type="text" class="form-control"
+                  name="StudentName" #name="ngModel" [(ngModel)]="studentService.selectedStudent.StudentName"
+                  placeholder="Student Name" required>
+        </div>
+  
+        <div class="form-group">
+          <select class="custom-select mr-sm-2" name="StudentProgram" #name="ngModel" [(ngModel)]="studentService.selectedStudent.StudentProgram" required >
+            <option selected>Choose Program Name</option>
+            <option value="Computational Science">Computational Science</option>
+            <option value="Information System">Information System</option>
+            <option value="Multimedia Computing">Multimedia Computing</option>
+            <option value="Software Engineering">Software Engineering</option>
+            <option value="Network Computing">Network Computing</option>
+          </select>
+        </div>
+  
+        <div class="input-group">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="StudentPic">
+            <label class="custom-file-label" for="StudentPic">Choose image</label>
+          </div>
+          <div class="input-group-append">
+            <button class="addbtn" type="submit" [disabled]="!studentAddForm.valid"
+                    data-toggle="collapse" data-target="#collapsableStudentForm"
+                    aria-expanded="false" aria-controls="collapsableStudentForm">Add Student</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  
+    <div class="addwidget scene_element scene_element--fadeinright"
+          data-toggle="collapse" data-target="#collapsableStudentEditForm"
+          aria-expanded="false" aria-controls="collapsableStudentEditForm">
+  
+      <div class="row">
+        <div class="col-4 addimage">
+          <div class="addimage">
+            <img src="../../assets/image/edit.png">
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="titlecontainer">
+            <div class="title">Edit Student Information</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="collapse scene_element scene_element--fadein" id="collapsableStudentEditForm">
+      <form #studentEditForm="ngForm" (ngSubmit)="onStudentUpdate(studentEditForm)">
+        <div class="form-group">
+          <input type="hidden" class="form-control"
+                  name="$key" #name="ngModel" [(ngModel)]="studentService.selectedStudent.$key"
+                  id="key" >
+        </div>
+  
+        <div class="form-group">
+          <input type="text" class="form-control"
+                  name="StudentMatric" #name="ngModel" [(ngModel)]="studentService.selectedStudent.StudentMatric"
+                  placeholder="Student Matric" required>
+        </div>
+  
+        <div class="form-group">
+          <input type="text" class="form-control"
+                  name="StudentName" #name="ngModel" [(ngModel)]="studentService.selectedStudent.StudentName"
+                  placeholder="Student Name" required>
+        </div>
+    
+        <div class="form-group">
+          <select class="custom-select mr-sm-2" name="StudentProgram" #name="ngModel" [(ngModel)]="studentService.selectedStudent.StudentProgram" required >
+            <option selected>Choose Program Name</option>
+            <option value="Computational Science">Computational Science</option>
+            <option value="Information System">Information System</option>
+            <option value="Multimedia Computing">Multimedia Computing</option>
+            <option value="Software Engineering">Software Engineering</option>
+            <option value="Network Computing">Network Computing</option>
+          </select>
+        </div>
+  
+        <div class="input-group">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input"
+                    id="StudentPic">
+            <label class="custom-file-label" for="StudentPic">Choose image</label>
+          </div>
+  
+          <div class="input-group-append">
+            <button class="addbtn" type="submit" [disabled]="!studentEditForm.valid"
+                    data-toggle="collapse" data-target="#collapsableStudentEditForm"
+                    aria-expanded="false" aria-controls="collapsableStudentEditForm">Update Student</button>
+          </div>
+        </div>
+  
+      </form>
+    </div>
+  
+  </div>
+  
+  
