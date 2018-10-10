@@ -18,6 +18,5 @@ export const appRoutes: Routes = [
   { path: 'student', component: StudentComponent },
   { path: 'lecturer/:userid', component: LecturerprofileComponent },
   { path: 'lecturer', component: LecturerComponent },
-  { path: 'student', component: StudentComponent },
 
 ]

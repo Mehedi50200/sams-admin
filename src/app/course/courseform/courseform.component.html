@@ -18,29 +18,29 @@
   </div>
   
   <div class="collapse scene_element scene_element--fadein" id="collapsableForm">
-    <form #courseForm="ngForm" (ngSubmit)="onSubmit(courseForm)">
+    <form #courseAddForm="ngForm" (ngSubmit)="onSubmit(courseAddForm)">
       <div class="form-group">
         <input type="hidden" class="form-control"
                 name="$key" #name="ngModel" [(ngModel)]="courseService.selectedCourse.$key"
-                id="coursecode" placeholder="Course Code" required>
+               placeholder="Course Code">
       </div>
 
       <div class="form-group">
         <input type="text" class="form-control"
                 name="CourseCode" #name="ngModel" [(ngModel)]="courseService.selectedCourse.CourseCode"
-                id="coursecode" placeholder="Course Code" required>
+                placeholder="Course Code" required>
       </div>
 
       <div class="form-group">
         <input type="text" class="form-control"
                 name="CourseName" #name="ngModel" [(ngModel)]="courseService.selectedCourse.CourseName"
-                id="coursename" placeholder="Course Name" required>
+                placeholder="Course Name" required>
       </div>
 
       <div class="form-group">
         <input type="text" class="form-control"
                 name="CourseCredit" #name="ngModel" [(ngModel)]="courseService.selectedCourse.CourseCredit"
-                id="coursecredit" placeholder="Course Credit" required>
+                placeholder="Course Credit" required>
       </div>
 
       <div class="input-group">
@@ -50,7 +50,7 @@
           <label class="custom-file-label" for="inputGroupFile04">Choose image</label>
         </div>
         <div class="input-group-append">
-          <button class="addbtn" type="submit" [disabled]="!courseForm.valid"
+          <button class="addbtn" type="submit" [disabled]="!courseAddForm.valid"
                   data-toggle="collapse" data-target="#collapsableForm"
                   aria-expanded="false" aria-controls="collapsableForm">Add Course</button>
         </div>

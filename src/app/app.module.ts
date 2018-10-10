@@ -27,15 +27,18 @@ import { CourseformComponent } from './course/courseform/courseform.component';
 import { CourselistComponent } from './course/courselist/courselist.component';
 
 import { StudentComponent } from './student/student.component';
+import { StudentformComponent } from './student/studentform/studentform.component';
+import { StudentlistComponent } from './student/studentlist/studentlist.component';
 
 
 import { LecturerComponent } from './lecturer/lecturer.component';
 import { LecturerprofileComponent } from './lecturer/lecturerprofile/lecturerprofile.component';
 import { LecturerallcourselistComponent } from './lecturer/lecturerallcourselist/lecturerallcourselist.component';
 
-
 import { CourseService } from './services/course.service';
 import { LecturerService } from './services/lecturer.service';
+import { StudentService } from './services/student.service';
+
 
 
 @NgModule({
@@ -52,6 +55,8 @@ import { LecturerService } from './services/lecturer.service';
     LecturerComponent,
     LecturerprofileComponent,
     LecturerallcourselistComponent,
+    StudentformComponent,
+    StudentlistComponent,
   ],
 
   imports: [
@@ -67,7 +72,7 @@ import { LecturerService } from './services/lecturer.service';
     ToastrModule.forRoot(),
 
   ],
-  providers: [CourseService, LecturerService],
+  providers: [CourseService, LecturerService, StudentService],
   bootstrap: [AppComponent]
 })
 

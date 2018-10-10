@@ -11,29 +11,29 @@
         <div class="form-group">
           <input type="text" class="form-control"
               name="CourseCode" #name="ngModel" [(ngModel)]="lecturerService.selectedCourse.CourseCode"
-              id="coursecode" placeholder="Course Code" required>
+              placeholder="Course Code" required>
         </div>
     
         <div class="form-group">
           <input type="text" class="form-control"
               name="CourseName" #name="ngModel" [(ngModel)]="lecturerService.selectedCourse.CourseName"
-              id="coursename" placeholder="Course Name" required>
-        </div>
-    
-        <div class="form-group">
-          <input type="text" class="form-control" 
-              name="CourseCredit" #name="ngModel" [(ngModel)]="lecturerService.selectedCourse.CourseCredit" 
-              id="coursecredit" placeholder="Course Credit" required>
+              placeholder="Course Name" required>
         </div>
 
         <div class="form-group">
-            <input type="text" class="form-control" name="Time" #name="ngModel" [(ngModel)]="Time"
-              id="time" placeholder="Time" required>
-        </div>
+            <input type="text" class="form-control" 
+                name="CourseCredit" #name="ngModel" [(ngModel)]="lecturerService.selectedCourse.CourseCredit" 
+                placeholder="Course Credit" required>
+          </div>
 
         <div class="form-group">
-          <select class="custom-select mr-sm-2" name="Day" #name="ngModel" [(ngModel)]="Day" id="day" placeholder="Time" required >
-            <option selected>Choose...</option>
+            <input type="text" class="form-control" name="Time" #name="ngModel" [(ngModel)]="lecturerService.selectedCourse.Time"
+              placeholder="Time" required>
+        </div>       
+
+        <div class="form-group">
+          <select class="custom-select mr-sm-2" name="Day" #name="ngModel" [(ngModel)]="lecturerService.selectedCourse.Day" 
+              placeholder="Program Name" required >
             <option value="Monday">Monday</option>
             <option value="Tuesday">Tuesday</option>
             <option value="WednesDay">Wednecday</option>

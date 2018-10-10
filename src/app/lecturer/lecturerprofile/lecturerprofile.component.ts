@@ -30,10 +30,8 @@ export class LecturerprofileComponent implements OnInit {
   constructor(private route: ActivatedRoute, private lecturerService: LecturerService, private toastr: ToastrService) { }
 
   ngOnInit() {
-
     this.routeSub = this.route.params.subscribe(params => {
       this.userId = params['userid'];
-
     });
 
     this.lecturerProfileObservable = this.lecturerService.getLecturerProfile(this.userId).valueChanges();
@@ -68,10 +66,7 @@ export class LecturerprofileComponent implements OnInit {
     }
   }
 
-  onCourseAsssignedEdit(asignedcrs: AssignedCourse) {
-    this.lecturerService.selectedAssignedCourse = Object.assign({},asignedcrs);
-  }
-
+  
   resetForm(form : NgForm){
     if (form != null)
       form.reset();
@@ -85,6 +80,11 @@ export class LecturerprofileComponent implements OnInit {
       Time: '',
     }
   }
+
+  onCourseAsssignedEdit(asignedcrs: AssignedCourse) {
+    this.lecturerService.selectedAssignedCourse = Object.assign({},asignedcrs);
+  }
+
 
   onUpdateAssignedCourse(form?: NgForm) {
     this.lecturerService.updateAssignedCourse(form.value);

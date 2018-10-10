@@ -190,10 +190,3 @@ button :focus{
     text-align: center;
     vertical-align: middle;
 }
-
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
-}

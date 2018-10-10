@@ -1,7 +1,7 @@
 .lecturercard {
   width: 240px;
   height: 220px;
-  background: #fff;
+  background: #ffffff;
   border-radius: 7px;
   overflow: hidden;
   display: flex;
@@ -18,7 +18,7 @@
 
 .lecturercard:hover {
   transform: translateY(-10px) scale(1.015);
-  box-shadow: 0 15px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 15px 20px rgba(0,0,0,0.2);
   transition: transform .4s ease;
 }
 

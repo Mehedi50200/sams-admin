@@ -51,6 +51,7 @@ export class LecturerService {
     });
   }
 
+ 
   updateAssignedCourse(course: AssignedCourse){
     this.assignedCourseList.update(course.CourseCode,{
       CourseName: course.CourseName,
@@ -61,6 +62,7 @@ export class LecturerService {
       Time: course.Time,
     });
   }
+
 
   deleteAssignedCourse(key: string){
     this.assignedCourseList.remove(key);
