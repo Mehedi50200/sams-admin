@@ -140,3 +140,19 @@
   transform: scale(5);
   transition: transform 1s ease;
 }
+
+.tooltip-class .tooltip-inner{
+  background: linear-gradient(to left, rgb(0, 39, 168), rgb(0, 118, 172));
+  font-size: 100%;
+}
+
+.tooltip-class-edit .tooltip-inner{
+  background: rgb(0, 114, 76);
+  font-size: 90%;
+}
+
+
+.tooltip-class-delete .tooltip-inner{
+  background: rgb(114, 0, 0);
+  font-size: 90%;
+}

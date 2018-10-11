@@ -50,7 +50,7 @@
         </div>
         
         <div class="form-group" *ngIf="downloadURL | async; let downloadSrc">
-          <input type="hidden" class="form-control imageurl"
+          <input type="hidden" class="form-control imageurl" 
                   name="StudentProfileImageUrl" #name="ngModel" ngModel= {{downloadSrc}}
                   placeholder="File Url">
           <div class="uploadedImage"><img src="{{downloadSrc}}"></div>
@@ -58,7 +58,7 @@
                 
         <div class="input-group">
           <!-- (change)="selectFile($event)"
-          <span> {{ pct | number }}% </span>   -->
+          <span> {{ pct | number }}% </span>   --> 
           <div class="custom-file">
             <input type="file" (change)="startUpload($event.target.files)" accept=".png,.jpg"
                   [disabled]="!studentAddForm.valid"
@@ -69,7 +69,7 @@
             <button class="addbtn" type="submit" [disabled]="!studentAddForm.valid" 
                 data-toggle="collapse" data-target="#collapsableStudentForm"
                 aria-expanded="false" aria-controls="collapsableStudentForm">Add Student</button>
-          </div>         
+          </div>                
         </div>
 
         <div class="input-group">
@@ -116,12 +116,6 @@
                   name="StudentMatric" #name="ngModel" [(ngModel)]="studentService.selectedStudent.StudentMatric"
                   placeholder="Student Matric" required>
         </div>
-
-        <div class="form-group">
-          <input type="hidden" class="form-control"
-                  name="StudentProfileImageUrl" #name="ngModel" [(ngModel)]="studentService.selectedStudent.StudentProfileImageUrl"
-                  placeholder="File Url" >
-        </div>
   
         <div class="form-group">
           <input type="text" class="form-control"
@@ -145,13 +139,6 @@
                   placeholder="File Url">
           <div class="uploadedImage"><img src="{{downloadSrc}}"></div>
         </div>
-
-        <div class="progressbar">
-          <div *ngIf="percentage | async as pct">
-            <progress class="progressbar" [value]="pct" max="100"></progress><span> {{ pct | number }}% </span>     
-                      
-          </div>  
-        </div>
   
         <div class="input-group">
           <!-- (change)="selectFile($event)" -->
@@ -166,6 +153,12 @@
                     data-toggle="collapse" data-target="#collapsableStudentEditForm"
                     aria-expanded="false" aria-controls="collapsableStudentEditForm"> Update </button>
           </div>    
+        </div>
+
+        <div class="progressbar">
+          <div *ngIf="percentage | async as pct">
+            <progress class="progressbar" [value]="pct" max="100"></progress>                      
+          </div>  
         </div>
 
       </form>

@@ -84,9 +84,9 @@ export class StudentformComponent implements OnInit {
     this.percentage = this.task.snapshotChanges().pipe(map(s => (s.bytesTransferred / s.totalBytes) * 100));
     console.log(this.percentage);
     this.snapshot   = this.task.snapshotChanges();
-   // const x= this.task.snapshotChanges().pipe(
-     //             finalize(() => this.downloadURL = this.storage.ref(path).getDownloadURL() )
-       //           ).subscribe();    
+    const x= this.task.snapshotChanges().pipe(
+                 finalize(() => this.downloadURL = this.storage.ref(path).getDownloadURL() )
+               ).subscribe();    
   } 
 
   isActive(snapshot) {

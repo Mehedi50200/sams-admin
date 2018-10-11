@@ -30,13 +30,24 @@
   }
   
   .studentcard:hover .overlay {
-    transform: scale(6);
+    transform: scale(12);
     transition: transform .5s ease;
   }
    
-  .studentcard:hover p {
-    color: aliceblue;
+  .studentcard:hover .matric p {
+    color: rgb(255, 255, 255);
   }
+
+  .studentcard:hover .name p {
+    
+    color: rgba(0, 0, 0, 0.671);
+  }
+
+  .studentcard:hover .program p {
+    color: rgba(0, 0, 0, 0.459);
+  }
+
+
 
   .matric p {
     justify-content: center;
@@ -55,7 +66,7 @@
     position: relative;
     font-size: 14px;
     font-weight:500;
-    color: #000000;
+    color: #6b6b6b;
     margin-top: 0px !important;
     z-index: 1000;
     transition: color 0.3s ease-out;
@@ -90,7 +101,6 @@
   .circle img[src=""] {
     display: none;
   }
-  
   
   .overlay {
     width: 110px;
