@@ -3,43 +3,37 @@
     *ngFor="let student of studentList" >
     <div class="overlay"></div>
 
-    <div class="row rowcenter">
-        <div class="col-2 nopadding">
+    <div class="row">
+      <div class="col-4">
+        <div class= "titlecontainer">
           <div class="circle">
-            <img src={{student.StudentProfileImageUrl}} />
+              <img src={{student.StudentProfileImageUrl}} />
+          </div>	 
+          <div class="buttoncontainer">
+            <div class="button">
+              <a (click)="onDelete(student.$key)"> <img src="../../assets/image/deletebtn.png"></a>
+            </div> 
+            <div class="button" data-toggle="collapse"
+                data-target="#collapsableStudentEditForm"
+                aria-expanded="false" aria-controls="collapsableEditForm">
+              <a (click)="onEdit(student)"> <img src="../../assets/image/editbtn.png"></a>
+            </div> 
           </div>
+           
         </div>
-
-        <div class="col-1 nopadding">
-          <div class="matric">
-            <p> {{student.StudentMatric}}</p>
-          </div>          
+      </div>
+      <div class="col-8 image-container">
+        <div class="matric">
+          <p> {{student.StudentMatric}}</p>
         </div>
-
-        <div class="col-3 nopadding">
-          <div class="name">
-            <p>{{student.StudentName }}</p>
-          </div>
+        <div class="name">
+          <p>{{student.StudentName }}</p>
         </div>
-
-        <div class="col-3 nopadding">
-          <div class="program">
-              <p> {{student.StudentProgram}}</p>
-            </div>          
-        </div>
-        
-        <div class="col-3 opadding">
-          <div class="button">
-            <a (click)="onDelete(student.$key)"> <img src="../../assets/image/deletebtn.png"></a>
-          </div> 
-          <div class="button" data-toggle="collapse"
-              data-target="#collapsableStudentEditForm"
-              aria-expanded="false" aria-controls="collapsableEditForm">
-            <a (click)="onEdit(student)"> <img src="../../assets/image/editbtn.png"></a>
-          </div>               
-        </div>
-    </div>
-    
+        <div class="program">
+          <p> {{student.StudentProgram}}</p>
+        </div> 
+      </div>
+    </div>    
   </a>
 </div>
   

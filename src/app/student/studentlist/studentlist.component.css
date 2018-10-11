@@ -1,32 +1,26 @@
-.studentcard {
-    flex-basis: 360px;
+  .studentcard {
+    flex-basis: 300px;
     flex-grow: 10;
-    max-width: 530px;
-    height: 65px;
-    background: #ffffff;
-    border-radius: 7px;
+    height: 100px;
+    margin: 5px;
     overflow: hidden;
+    border-radius: 6px;
+    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);background: white;
     position: relative;
-    box-shadow: 0 14px 26px rgba(0,0,0,0.1);
-    transition: all 0.3s ease-out;
-    text-decoration: none;
-    margin:5px;
   }
-  
-  .nopadding{
-    padding: 2px !important;
-    margin: 0 !important;
-  }
-  
-  .opadding{
-    padding: 0 !important;
-    margin: 0 !important;
+
+  .titlecontainer {
+    height: 100px;
+    font-weight: 400;
+    box-shadow:  5px 0px 5px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 7px 0px 0px 7px;
     display: flex;
-    flex-direction: row !important;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-  }
+    text-align: center;
+    vertical-align: middle;
+}
 
 
   .studentcard:hover {
@@ -36,47 +30,41 @@
   }
   
   .studentcard:hover .overlay {
-    transform: scale(5);
-    transition: transform 1s ease;
+    transform: scale(6);
+    transition: transform .5s ease;
   }
    
+  .studentcard:hover p {
+    color: aliceblue;
+  }
+
   .matric p {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 100% ;
     font-size: 12px;
-    font-weight:300;
+    font-weight:500;
     color: #000000;
-    margin-top: 0px;
+    margin-top: 5px;
     z-index: 1000;
     transition: color 0.3s ease-out;
   }
 
   .name p {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
     position: relative;
-    width: 100% ;
     font-size: 14px;
     font-weight:500;
     color: #000000;
-    margin-top: 0px;
+    margin-top: 0px !important;
     z-index: 1000;
     transition: color 0.3s ease-out;
   }
   
   .program p {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 100% ;
     font-size: 14px;
     font-weight: 300;
     color:rgb(0, 0, 0);
@@ -87,14 +75,13 @@
   
   
   .circle img {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-left: 20px;
     border-radius: 50%;
     z-index: 1;
     box-shadow: 0 5px 14px rgba(0,0,0,0.3), 0 15px 24px rgba(0,0,0, 0.2);
@@ -125,19 +112,35 @@
 
   }
   
-  .button{
-      margin: 3px;
+  .buttoncontainer{
+    display: flex;    
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    display: none;
+    position: relative;
+  }
+
+  .studentcard:hover .buttoncontainer{
+    transform: translateY(-5px);
+    display: flex;    
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    transition: transform 2s ease-in;
   }
 
   .button img{
-      height:30px;
-      width: 30px;
+      height:25px;
+      width: 25px;
+      margin: 0px 3px 0px 3px;
+      border-radius: 50%;
   }
-  
-  .rowcenter{
-    flex-direction: row;
-    margin-top: 5px !important ;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+
+  .button:hover img{
+    transform: scale(1.2);
+    transition: transform .5s ease;
+    box-shadow: 0 5px 14px rgba(0,0,0,0.3), 0 15px 24px rgba(0,0,0, 0.2);
   }
