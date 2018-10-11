@@ -59,7 +59,7 @@
   <div class="col-12 col-sm-7 col-lg-8 col-xl-8">
     <div class="main">
       <div class="coursewidget" *ngFor="let course of courseList" 
-        data-toggle="collapse" data-target="#confirmassign"
+        data-toggle="collapse" data-target="#confirmassign" placement="right" ngbTooltip="select to assign" tooltipClass="tooltip-class"
         aria-expanded="false" aria-controls="confirmassign" (click)="onCourseSelected(course)">          
         <div class="row">
           <div class="col-3">

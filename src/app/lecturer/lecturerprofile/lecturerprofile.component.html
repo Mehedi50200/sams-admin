@@ -10,19 +10,18 @@
                 <img src= {{lecturerProf.userProfileImageUrl}} />
               </div>
               <div class="userInfo">
-                <p><span style="color:dimgray; font-size:15px; font-weight:700"> {{lecturerProf.userName}} </span> </p>
-                <div style="margin-left:30px"> <p><span style="color:dimgray; font-size:15px; font-style:italic;">email address :</span>  {{lecturerProf.userEmail}}</p></div>
+                <p><span style="color: #4e4e4e; font-size:15px; font-weight:700"> {{lecturerProf.userName}} </span> </p>
+                <div style="margin-left:30px"> <p><span style="color:#acacac; font-size:15px;">email :</span>&nbsp; <span style="color:#a1a1a1; font-size:15px; font-style:italic;">{{lecturerProf.userEmail}}</span>  </p></div>
               </div>
           </div>              
         </div>
       </div>
       <div class="col-12 col-sm-3 col-md-3 col-lg-2 nopadding">
-        <div class="assigncoursecard"  
+        <div class="assigncoursecard"
           data-toggle="collapse" data-target="#assignnewcourse"
-          aria-expanded="false" aria-controls="assignnewcourse">          
-          <div class="assignoverlay"></div>
-            <img src="../../assets/image/assign.png">         
-          <p>Assign New Course</p>
+          aria-expanded="false" aria-controls="assignnewcourse">       
+          <img  placement="left" ngbTooltip="Assign New Course" tooltipClass="tooltip-class" src="../../assets/image/assign.png">         
+         <!-- <p>Assign New Course</p> -->
         </div>
       </div>
     </div>
@@ -103,13 +102,12 @@
     
     <div class="main">
       <div class="coursewidget" *ngFor="let assignedCourse of assignedCourseList">
-        <div class="row">
-      
+        <div class="row">      
                 
           <div class="col-10">
             <div class="row">
                 <div class="sbutton" routerLink="/lecturer/{{userId}}/{{assignedCourse.$key}}">
-                  <a> <img src="../../assets/image/studentlist.png"></a>
+                  <a> <img placement="top" ngbTooltip="Student List" tooltipClass="tooltip-class" src="../../assets/image/studentlist.png"></a>
                 </div> 
               <div class="courseinfo">
                 <div class="titlecontainer">
@@ -129,17 +127,17 @@
             </div>          
           </div>
           <div class="col-2 button-grp">
-              <div class="button">
-                <a (click)="onCourseUnasssigned(assignedCourse.$key)"> <img src="../../assets/image/deletebtn.png"></a>
-              </div>
-              <div class="button">
-                <a (click)="onCourseAsssignedEdit(assignedCourse)" data-toggle="collapse" data-target="#collapsableAssignedCourseEditForm"
-                    aria-expanded="false" aria-controls="collapsableAssignedCourseEditForm"> <img src="../../assets/image/editbtn.png"></a>
-              </div>
-              <div class="courseimage">
-                <img src="{{assignedCourse.Url}}">
-              </div>
+            <div class="button">
+              <a (click)="onCourseUnasssigned(assignedCourse.$key)"> <img placement="top" ngbTooltip="Delete" tooltipClass="tooltip-class-delete" src="../../assets/image/deletebtn.png"></a>
             </div>
+            <div class="button">
+              <a (click)="onCourseAsssignedEdit(assignedCourse)" data-toggle="collapse" data-target="#collapsableAssignedCourseEditForm"
+                  aria-expanded="false" aria-controls="collapsableAssignedCourseEditForm"> <img placement="bottom" ngbTooltip="Edit" tooltipClass="tooltip-class-edit" src="../../assets/image/editbtn.png"></a>
+            </div>
+            <div class="courseimage">
+              <img src="{{assignedCourse.Url}}">
+            </div>
+          </div>
 
         </div>        
       </div>

@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  box-shadow: 0 14px 26px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 5px rgba(0,0,0,0.05);
   transition: all 0.3s ease-out;
   text-decoration: none;
   margin:5px;
@@ -24,29 +24,33 @@
 
 .lecturercard:hover .overlay {
   transform: scale(5);
-  transition: transform 1s ease;
+  transition: transform .3s ease-in;
 }
 
 
-.lecturercard:hover p {
-  color: rgb(0, 0, 0);
+.lecturercard:hover .userName p {
+  color: #00000071;
   transform: scale(1.1);
 }
 
+.lecturercard:hover .userEmail p {
+  color: #ffffff96;
+  transform: scale(1.1);
+}
 
 .userName p {
-  font-size: 15px;
+  font-size: 17px;
   font-weight:500;
-  color: #000000;
+  color: #4e4e4e;
   margin-top: 10px;
   z-index: 1000;
   transition: color 0.3s ease-out;
 }
 
 .userEmail p {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
-  color:rgb(0, 0, 0);
+  color: #acacac;
   margin-top: 0px;
   z-index: 1000;
   transition: color 0.3s ease-out;

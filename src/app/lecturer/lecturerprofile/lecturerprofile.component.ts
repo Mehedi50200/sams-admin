@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { LecturerService } from '../../services/lecturer.service';
 import { AssignedCourse } from '../lecturerassignedcourse';
@@ -12,7 +12,8 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-lecturerprofile',
   templateUrl: './lecturerprofile.component.html',
-  styleUrls: ['./lecturerprofile.component.css']
+  styleUrls: ['./lecturerprofile.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class LecturerprofileComponent implements OnInit {
 

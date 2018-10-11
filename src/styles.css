@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background: linear-gradient(to left, #efefef,#e5e6e8);
+ background: linear-gradient(to left, #efefef,#f1f1f1);
+}
+
+body p { 
+  font-family:  Georgia, serif; 
 }
 
 body::-webkit-scrollbar { width:0 !important; }
@@ -190,3 +194,4 @@ button :focus{
     text-align: center;
     vertical-align: middle;
 }
+

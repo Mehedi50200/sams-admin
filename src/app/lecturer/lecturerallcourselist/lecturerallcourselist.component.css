@@ -86,7 +86,7 @@
 }
 
 .coursewidget:hover {
-  transform: translateY(-7px);
+  transform: translateY(-10px);
   /*  background: linear-gradient(to left, #EB3349, #F45C43); */
   box-shadow: -1px 3px 20px 5px rgba(0, 51, 73, 0.4);
   font-weight: 700;
@@ -169,4 +169,10 @@ input.ng-invalid.ng-dirty {
 .nopadding{
   padding: 0 !important;
   margin: 0 !important;
+}
+
+
+.tooltip-class .tooltip-inner{
+  background: linear-gradient(to left, rgb(0, 39, 168), rgb(0, 118, 172));
+  font-size: 100%;
 }
