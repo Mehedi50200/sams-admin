@@ -53,6 +53,7 @@
           <input type="hidden" class="form-control imageurl"
                   name="StudentProfileImageUrl" #name="ngModel" ngModel= {{downloadSrc}}
                   placeholder="File Url">
+          <div class="uploadedImage"><img src="{{downloadSrc}}"></div>
         </div>
                 
         <div class="input-group">
@@ -139,9 +140,10 @@
         </div>
 
         <div class="form-group" *ngIf="downloadURL | async; let downloadSrc">
-          <input class="form-control"
+          <input type="hidden" class="form-control imageurl"
                   name="StudentProfileImageUrl" #name="ngModel" ngModel= {{downloadSrc}}
-                  placeholder="File Url" required >
+                  placeholder="File Url">
+          <div class="uploadedImage"><img src="{{downloadSrc}}"></div>
         </div>
 
         <div class="progressbar">

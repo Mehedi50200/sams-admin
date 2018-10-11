@@ -6,6 +6,7 @@ import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/storage
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs/Observable';
 import { finalize } from 'rxjs/operators';
+import { map } from 'rxjs/operators/map';
 
 
 @Component({
@@ -80,11 +81,12 @@ export class StudentformComponent implements OnInit {
     this.task = this.storage.upload(path, file);
 
     // Progress monitoring
-    this.percentage = this.task.percentageChanges();
+    this.percentage = this.task.snapshotChanges().pipe(map(s => (s.bytesTransferred / s.totalBytes) * 100));
+    console.log(this.percentage);
     this.snapshot   = this.task.snapshotChanges();
-    const x= this.task.snapshotChanges().pipe(
-                  finalize(() => this.downloadURL = this.storage.ref(path).getDownloadURL() )
-                  ).subscribe();    
+   // const x= this.task.snapshotChanges().pipe(
+     //             finalize(() => this.downloadURL = this.storage.ref(path).getDownloadURL() )
+       //           ).subscribe();    
   } 
 
   isActive(snapshot) {
