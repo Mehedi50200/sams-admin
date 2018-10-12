@@ -1,0 +1,75 @@
+<app-header></app-header>
+<div class="bodycontainer">
+  
+  <div class="row">
+    <div class=" col-12 col-sm-9 col-md-9 col-lg-10 nopadding">
+      <div class="profilecard" *ngFor="let lecturerProf of lecturerProfile">
+        <div class="row">
+            <div class="pcircle">
+              <img src= {{lecturerProf.userProfileImageUrl}} />
+            </div>
+            <div class="userInfo">
+              <p><span style="color: #4e4e4e; font-size:15px; font-weight:700"> {{lecturerProf.userName}} </span> </p>
+              <div style="margin-left:30px"> <p><span style="color:#acacac; font-size:15px;">email :</span>&nbsp; <span style="color:#a1a1a1; font-size:15px; font-style:italic;">{{lecturerProf.userEmail}}</span>  </p></div>
+            </div>
+        </div>              
+      </div>
+    </div>
+    <div class="col-12 col-sm-3 col-md-3 col-lg-2 nopadding">
+      <div class="assigncoursecard"
+        data-toggle="collapse" data-target="#enrolnewstudent"
+        aria-expanded="false" aria-controls="enrolnewstudent">       
+        <img  placement="left" ngbTooltip="Enrol New Student" tooltipClass="tooltip-class" src="../../assets/image/assign.png">
+      </div>
+    </div>
+  </div>
+
+  <!------------------------------------------------------------------Enroll New Student----------------------------------------------------------------->
+  <div class="row collapse" id="enrolnewstudent">
+    <app-lecturerallstudentlist></app-lecturerallstudentlist>
+  </div>
+  
+  <!--------------------------------------------------------------------Enrolled Student------------------------------------------------------------------->
+  
+
+  <div class="row">
+    <div class="sectionheader">
+      <h5 *ngFor="let assignedCourse of assignedCourseObject" ><span style="color:dimgray">Enrolled Student</span>&nbsp;
+        <span style="color:#a1a1a1; font-style:italic;">( {{courseCode}} &nbsp; {{assignedCourse.CourseName}} )</span>
+      </h5>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="main">
+        <a class="studentcard "*ngFor="let enrolledstudent of enrolledStudentList">
+          <div class="overlay"></div>
+          <div class="row">
+            <div class="col-4">
+              <div class= "estitlecontainer">
+                <div class="circle">
+                    <img src={{enrolledstudent.StudentProfileImageUrl}} />
+                </div>
+                <div class="buttoncontainer">
+                  <div class="button">
+                    <a (click)="onUnenrol(enrolledstudent.$key)"> <img placement="bottom" ngbTooltip="remove {{enrolledstudent.$key}} from this course" container="body" src="../../assets/image/deletebtn.png"></a>
+                  </div> 
+                </div>              
+              </div>
+            </div>
+            <div class="col-8 image-container">
+              <div class="matric">
+                <p> {{enrolledstudent.$key}}</p>
+              </div>
+              <div class="name">
+                <p>{{enrolledstudent.StudentName }}</p>
+              </div>
+              <div class="program">
+                <p> {{enrolledstudent.StudentProgram}}</p>
+              </div> 
+            </div>
+          </div>    
+        </a>
+    </div> 
+  </div>
+</div>

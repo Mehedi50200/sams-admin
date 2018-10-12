@@ -1,0 +1,183 @@
+.studentcard {
+    flex-basis: 300px;
+    flex-grow: 10;
+    height: 100px;
+    margin: 5px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);background: white;
+    position: relative;
+  }
+
+  .titlecontainer {
+    height: 100px;
+    font-weight: 400;
+    box-shadow:  5px 0px 5px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 7px 0px 0px 7px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+  .studentcard:hover {
+    transform: translateY(-6px) scale(1.005);
+    box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+    transition: transform .4s ease;
+  }
+  
+  .studentcard:hover .overlay {
+    transform: scale(12);
+    transition: transform .5s ease;
+  }
+   
+  .studentcard:hover .matric p {
+    color: rgb(255, 255, 255);
+  }
+
+  .studentcard:hover .name p {
+    
+    color: rgba(0, 0, 0, 0.671);
+  }
+
+  .studentcard:hover .program p {
+    color: rgba(0, 0, 0, 0.459);
+  }
+
+
+
+  .matric p {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 12px;
+    font-weight:500;
+    color: #000000;
+    margin-top: 5px;
+    z-index: 1000;
+    transition: color 0.3s ease-out;
+  }
+
+  .name p {
+    align-items: center;
+    position: relative;
+    font-size: 14px;
+    font-weight:500;
+    color: #6b6b6b;
+    margin-top: 0px !important;
+    z-index: 1000;
+    transition: color 0.3s ease-out;
+  }
+  
+  .program p {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 14px;
+    font-weight: 300;
+    color:rgb(0, 0, 0);
+    margin-top: 0px !important;
+    z-index: 1000;
+    transition: color 0.3s ease-out;
+  }
+  
+  
+  .circle img {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 5px 14px rgba(0,0,0,0.3), 0 15px 24px rgba(0,0,0, 0.2);
+  }
+  
+  .circle img[src=""] {
+    display: none;
+  }
+  
+  .overlay {
+    width: 110px;
+    position: absolute;
+    height: 110px;
+    border-radius: 50%;
+    background: linear-gradient(to left, #3CD3AD, #4CB8C4);
+    top: 14px;
+    left: 40%;
+    z-index: -1;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .main{    
+    display: flex;    
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .collapseform{
+    flex-basis: 300px;
+    flex-grow: 10;
+    height: fit-content;
+    margin: 10px;
+    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    background: #fff; 
+    position: relative;
+    padding:10px;
+  }
+  
+  .sectionheader {
+    width:100%;
+    height: 50px;
+    margin: 10px;
+    border-radius: 6px 6px 0 0;
+    background: transparent;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 2px #3CD3AD ;
+  }
+
+  .twobtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .yesbtn {
+    width: 100px;
+    background: linear-gradient(to left, #3CD3AD, #4CB8C4);
+    border-radius: 0px 7px 7px 0px;
+    border: 0px !important;
+    color: white;
+    font-weight: 400;
+  }
+  
+  .nobtn {
+    width:100px;
+    background: linear-gradient(to left, #EB3349, #F45C43);
+    border-radius: 7px 0px 0px 7px;
+    border: 0px !important;
+    color: white;
+    font-weight: 400;
+  }
+  
+  
+  button:disabled,
+  button[disabled] {
+    background: #efefef;
+    color: #ffffff;
+    border: 1px solid #D1D1D1 !important;
+  }
