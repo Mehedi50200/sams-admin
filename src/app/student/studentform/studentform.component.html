@@ -133,27 +133,24 @@
           </select>
         </div>
 
-        <div class="form-group" *ngIf="downloadURL | async; let downloadSrc">
+        <div class="form-group" >
           <input type="hidden" class="form-control imageurl"
-                  name="StudentProfileImageUrl" #name="ngModel" ngModel= {{downloadSrc}}
+                  name="StudentProfileImageUrl" #name="ngModel" [(ngModel)]= "studentService.selectedStudent.StudentProfileImageUrl"
                   placeholder="File Url">
-          <div class="uploadedImage"><img src="{{downloadSrc}}"></div>
         </div>
   
-        <div class="input-group">
-          <!-- (change)="selectFile($event)" -->
-          <div class="custom-file">
-            <input type="file" (change)="startUpload($event.target.files)" accept=".png,.jpg"
-                  [disabled]="!studentAddForm.valid"
-                  class="custom-file-input" id="StudentPic">
-            <label class="custom-file-label" for="StudentPic">Choose image</label>
+ 
+        <div class="input-group twobtn" >
+            <div class="input-group-append">
+                <button class="nobtn" type="button" data-toggle="collapse" data-target="#collapsableStudentEditForm"
+                  aria-expanded="false" aria-controls="collapsableStudentEditForm">Cancel</button>
+            </div>
+            <div class="input-group-append">
+              <button class="yesbtn" type="submit" [disabled]="!studentEditForm.valid"
+                      data-toggle="collapse" data-target="#collapsableStudentEditForm"
+                      aria-expanded="false" aria-controls="collapsableStudentEditForm"> Update </button>
+            </div>   
           </div>
-          <div class="input-group-append">
-            <button class="addbtn" type="submit" [disabled]="!studentEditForm.valid"
-                    data-toggle="collapse" data-target="#collapsableStudentEditForm"
-                    aria-expanded="false" aria-controls="collapsableStudentEditForm"> Update </button>
-          </div>    
-        </div>
 
         <div class="progressbar">
           <div *ngIf="percentage | async as pct">

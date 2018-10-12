@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CourseService } from '../../services/course.service';
 import { Course } from '../course';
 import { ToastrService } from 'ngx-toastr';
@@ -10,7 +10,6 @@ import { ToastrService } from 'ngx-toastr';
   selector: 'app-courselist',
   templateUrl: './courselist.component.html',
   styleUrls: ['./courselist.component.css'],
-  encapsulation: ViewEncapsulation.None,
 })
 
 

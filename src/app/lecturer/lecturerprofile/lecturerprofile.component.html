@@ -20,22 +20,27 @@
         <div class="assigncoursecard"
           data-toggle="collapse" data-target="#assignnewcourse"
           aria-expanded="false" aria-controls="assignnewcourse">       
-          <img  placement="left" ngbTooltip="Assign New Course" tooltipClass="tooltip-class" src="../../assets/image/assign.png">         
-         <!-- <p>Assign New Course</p> -->
+          <img  placement="left" ngbTooltip="Assign New Course" src="../../assets/image/assign.png">         
         </div>
       </div>
     </div>
   </div>
+
+
+<!------------------------------------------------------------------Assigned New Courses----------------------------------------------------------------->
   <div class="row collapse scene_element scene_element--fadein" id="assignnewcourse">
     <app-lecturerallcourselist></app-lecturerallcourselist>
   </div>
 
+<!--------------------------------------------------------------------Assigned Courses------------------------------------------------------------------->
   <div class="row">
     <div class="sectionheader">
       <h5><span style="color:dimgray">Assigned Courses</span></h5>
     </div>
   </div>
 
+
+                                         <!------------------Assigned Course Form Edit ----------------------->
   <div class="row assignupdate" >
     <div class="col-12 col-sm-8 col-md-6 col-lg-6 col-xl-4 nopadding">
       <div class="collapse scene_element scene_element--fadein" id="collapsableAssignedCourseEditForm">
@@ -97,16 +102,16 @@
 
     </div>
   </div>
-  
-  <div class="row">
-    
+                                                            <!------------------Assigned Course List ----------------------->
+  <div class="row">    
     <div class="main">
       <div class="coursewidget" *ngFor="let assignedCourse of assignedCourseList">
         <div class="row">      
                 
           <div class="col-10">
             <div class="row">
-                <div class="sbutton" routerLink="/lecturer/{{userId}}/{{assignedCourse.$key}}">
+                <div class="sbutton"  routerLink="/lecturer/{{userId}}/{{assignedCourse.$key}}"
+                (click)="onLecturerSelect(lecturer)">
                   <a> <img placement="top" ngbTooltip="Student List" tooltipClass="tooltip-class" src="../../assets/image/studentlist.png"></a>
                 </div> 
               <div class="courseinfo">
@@ -143,8 +148,5 @@
       </div>
     </div>       
   </div>
-
  
 </div>
-
-

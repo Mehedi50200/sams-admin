@@ -8,14 +8,14 @@
           <div class="circle">
               <img src={{student.StudentProfileImageUrl}} />
           </div>	 
-          <div class="buttoncontainer">
+          <div class="sbuttoncontainer">
             <div class="button">
-              <a (click)="onDelete(student.$key)"> <img src="../../assets/image/deletebtn.png"></a>
+              <a (click)="onDelete(student.$key)"> <img placement="left" ngbTooltip="delete" container="body" src="../../assets/image/deletebtn.png"></a>
             </div> 
             <div class="button" data-toggle="collapse"
                 data-target="#collapsableStudentEditForm"
                 aria-expanded="false" aria-controls="collapsableEditForm">
-              <a (click)="onEdit(student)"> <img src="../../assets/image/editbtn.png"></a>
+              <a (click)="onEdit(student)"> <img placement="right" ngbTooltip="edit" container="body" src="../../assets/image/editbtn.png"></a>
             </div> 
           </div>
            

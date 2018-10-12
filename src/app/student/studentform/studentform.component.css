@@ -144,3 +144,22 @@
     align-items: center;
     position: relative;
   }
+
+
+  .yesbtn {
+    width: 100px;
+    background: linear-gradient(to left, #3CD3AD, #4CB8C4);
+    border-radius: 0px 7px 7px 0px;
+    border: 0px !important;
+    color: white;
+    font-weight: 400;
+  }
+  
+  .nobtn {
+    width:100px;
+    background: linear-gradient(to left, #EB3349, #F45C43);
+    border-radius: 7px 0px 0px 7px;
+    border: 0px !important;
+    color: white;
+    font-weight: 400;
+  }

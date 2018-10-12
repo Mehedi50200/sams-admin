@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { LecturerService } from '../../services/lecturer.service';
 import { AssignedCourse } from '../lecturerassignedcourse';
@@ -13,11 +13,11 @@ import { NgForm } from '@angular/forms';
   selector: 'app-lecturerprofile',
   templateUrl: './lecturerprofile.component.html',
   styleUrls: ['./lecturerprofile.component.css'],
-  encapsulation: ViewEncapsulation.None,
 })
 export class LecturerprofileComponent implements OnInit {
 
   assignedCourseList: AssignedCourse[];
+
   lecturerProfileObservable: Observable<any>;
   private routeSub: any;
   userId: string;
@@ -25,6 +25,8 @@ export class LecturerprofileComponent implements OnInit {
   userEmail: string;
   userProfileImageUrl: string;
   lecturerProfile: LecturerProfile[];
+
+  assignedCourseKey: string;
   
   
 
@@ -57,7 +59,7 @@ export class LecturerprofileComponent implements OnInit {
         this.assignedCourseList.push(y as AssignedCourse);
       });
     });
-        
+      
   }  
 
   onCourseUnasssigned(key: string) {
@@ -92,4 +94,9 @@ export class LecturerprofileComponent implements OnInit {
     this.resetForm(form);
     this.toastr.success('Course Updated Successfully', 'Course Updated');
   }
+
+  onLecturerSelect(lecturer){
+    this.lecturerService.selectedLecturer = Object.assign({},lecturer);
+  }
+
 }

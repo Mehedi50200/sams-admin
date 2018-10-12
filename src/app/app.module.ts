@@ -38,6 +38,8 @@ import { LecturerallcourselistComponent } from './lecturer/lecturerallcourselist
 import { CourseService } from './services/course.service';
 import { LecturerService } from './services/lecturer.service';
 import { StudentService } from './services/student.service';
+import { LecturerallstudentlistComponent } from './lecturer/lecturerallstudentlist/lecturerallstudentlist.component';
+import { LecturerenrolledstudentlistComponent } from './lecturer/lecturerenrolledstudentlist/lecturerenrolledstudentlist.component';
 
 
 
@@ -57,6 +59,8 @@ import { StudentService } from './services/student.service';
     LecturerallcourselistComponent,
     StudentformComponent,
     StudentlistComponent,
+    LecturerallstudentlistComponent,
+    LecturerenrolledstudentlistComponent,
   ],
 
   imports: [
