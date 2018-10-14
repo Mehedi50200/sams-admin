@@ -2,7 +2,7 @@
 <div class="bodycontainer">
   
   <div class="row">
-    <div class=" col-12 col-sm-9 col-md-9 col-lg-10 nopadding">
+    <div class=" col-3 nopadding">
       <div class="profilecard" *ngFor="let lecturerProf of lecturerProfile">
         <div class="row">
             <div class="pcircle">
@@ -15,7 +15,12 @@
         </div>              
       </div>
     </div>
-    <div class="col-12 col-sm-3 col-md-3 col-lg-2 nopadding">
+    <div class=" col-6 userInfo nopadding">
+      <h5 *ngFor="let assignedCourse of assignedCourseObject" >
+        <span style="color:#a1a1a1; font-style:italic;">( {{courseCode}} &nbsp; {{assignedCourse.CourseName}} )</span>
+      </h5>
+    </div>
+    <div class="col-3 nopadding">
       <div class="assigncoursecard"
         data-toggle="collapse" data-target="#enrolnewstudent"
         aria-expanded="false" aria-controls="enrolnewstudent">       
@@ -25,7 +30,7 @@
   </div>
 
   <!------------------------------------------------------------------Enroll New Student----------------------------------------------------------------->
-  <div class="row collapse" id="enrolnewstudent">
+  <div class="row scene_element--fadein collapse" id="enrolnewstudent">
     <app-lecturerallstudentlist></app-lecturerallstudentlist>
   </div>
   
@@ -34,9 +39,7 @@
 
   <div class="row">
     <div class="sectionheader">
-      <h5 *ngFor="let assignedCourse of assignedCourseObject" ><span style="color:dimgray">Enrolled Student</span>&nbsp;
-        <span style="color:#a1a1a1; font-style:italic;">( {{courseCode}} &nbsp; {{assignedCourse.CourseName}} )</span>
-      </h5>
+      <h5><span style="color:dimgray">Enrolled Student</span></h5>
     </div>
   </div>
 
