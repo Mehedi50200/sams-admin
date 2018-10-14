@@ -122,18 +122,6 @@
 
   }
 
-  .collapseform{
-    flex-basis: 300px;
-    flex-grow: 10;
-    height: fit-content;
-    margin: 10px;
-    box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    background: #fff; 
-    position: relative;
-    padding:10px;
-  }
-  
   .sectionheader {
     width:100%;
     height: 50px;
@@ -148,36 +136,37 @@
     border-bottom: solid 2px #3CD3AD ;
   }
 
-  .twobtn{
+
+  .buttoncontainer{
+    display: none;
+  }
+
+  .studentcard:hover .buttoncontainer{
     display: flex;
-    flex-direction: row;
+    flex-flow: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .button img{
+    height:25px;
+    width: 25px;
+    margin-top: 10px;
+    border-radius: 50%;
+    display: flex;
+    flex-flow: row;
     justify-content: center;
     align-items: center;
-    position: relative;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
   }
-  
-  .yesbtn {
-    width: 100px;
-    background: linear-gradient(to left, #3CD3AD, #4CB8C4);
-    border-radius: 0px 7px 7px 0px;
-    border: 0px !important;
-    color: white;
-    font-weight: 400;
-  }
-  
-  .nobtn {
-    width:100px;
-    background: linear-gradient(to left, #EB3349, #F45C43);
-    border-radius: 7px 0px 0px 7px;
-    border: 0px !important;
-    color: white;
-    font-weight: 400;
-  }
-  
-  
-  button:disabled,
-  button[disabled] {
-    background: #efefef;
-    color: #ffffff;
-    border: 1px solid #D1D1D1 !important;
+
+  .button:hover img{
+    transform: scale(1.3);
+    transition: transform .5s ease;
+    box-shadow: 0 5px 14px rgba(0,0,0,0.3), 0 15px 24px rgba(0,0,0, 0.2);
   }

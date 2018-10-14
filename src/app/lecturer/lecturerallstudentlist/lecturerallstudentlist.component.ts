@@ -36,26 +36,11 @@ export class LecturerallstudentlistComponent implements OnInit {
     });
   }
 
-  onEnrol(form?: NgForm)
+
+  onEnrol(student)
   {
-    this.lecturerService.enrolStudent(form.value);
-    console.log(form.value);
+    this.lecturerService.enrolStudent(student);
     this.toastr.success('Student enrolled Successfully', 'Student Added');
-    this.resetForm(form);
-  }
-
- 
-  resetForm(form : NgForm){
-    if (form != null)
-      form.reset();
-
-    this.lecturerService.selectedStudent = {
-      $key: '',
-      StudentMatric : '',
-      StudentName : '',
-      StudentProgram: '',
-      StudentProfileImageUrl: '',
-    }
   }
 
   onStudentSelected(student: Student){

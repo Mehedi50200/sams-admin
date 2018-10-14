@@ -4,75 +4,35 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-12 col-sm-5 col-lg-4 col-xl-4">
-    <div class="confirmenrol collapse collapseform scene_element scene_element--fadein" id="confirmenrol">     
-      <form #studentEnrolForm="ngForm" (ngSubmit)="onEnrol(studentEnrolForm)">
-        <div class="form-group">
-          <input type="text" class="form-control"
-              name="StudentMatric" #name="ngModel" [(ngModel)]="lecturerService.selectedStudent.StudentMatric"
-              placeholder="Student Matric" required>
-        </div>
-    
-        <div class="form-group">
-          <input type="text" class="form-control"
-              name="StudentName" #name="ngModel" [(ngModel)]="lecturerService.selectedStudent.StudentName"
-              placeholder="Student Name" required>
-        </div>
-
-        <div class="form-group">
-          <input type="text" class="form-control" 
-              name="StudentProgram" #name="ngModel" [(ngModel)]="lecturerService.selectedStudent.StudentProgram" 
-              placeholder="Student Program" required>
-        </div>
-
-        <div class="form-group">
-          <input type="hidden" class="form-control" 
-              name="StudentProfileImageUrl" #name="ngModel" [(ngModel)]="lecturerService.selectedStudent.StudentProfileImageUrl" required>
-        </div>
-  
-        <div class="input-group twobtn" >
-          <div class="input-group-append">
-              <button class="nobtn" type="button" data-toggle="collapse" data-target="#confirmenrol"
-                aria-expanded="false" aria-controls="confirmenrol">Cancel</button>
-          </div>
-          <div class="input-group-append">
-            <button class="yesbtn" type="submit" [disabled]="!studentEnrolForm.valid" data-toggle="collapse" data-target="#confirmenrol"
-                aria-expanded="false" aria-controls="confirmenrol">Enrol</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <div class="col-12 col-sm-7 col-lg-8 col-xl-8">    
-    <div class="main">
-      <a class="studentcard "*ngFor="let student of studentList"
-      data-toggle="collapse" data-target="#confirmenrol" placement="bottom" 
-      ngbTooltip="Add {{student.StudentMatric}} to this Course"  container="body"
-      aria-expanded="false" aria-controls="confirmenrol" (click)="onStudentSelected(student)" >
-        <div class="overlay"></div>
-        <div class="row">
-          <div class="col-4">
-            <div class= "titlecontainer">
-              <div class="circle">
-                  <img src={{student.StudentProfileImageUrl}} />
-              </div>            
-            </div>
-          </div>
-          <div class="col-8 image-container">
-            <div class="matric">
-              <p> {{student.StudentMatric}}</p>
-            </div>
-            <div class="name">
-              <p>{{student.StudentName }}</p>
-            </div>
-            <div class="program">
-              <p> {{student.StudentProgram}}</p>
+<div class="col-12">    
+  <div class="main">
+    <a class="studentcard "*ngFor="let student of studentList" click="onStudentSelected(student)">
+      <div class="overlay"></div>
+      <div class="row">
+        <div class="col-4">
+          <div class= "titlecontainer">
+            <div class="circle">
+                <img src={{student.StudentProfileImageUrl}} />
             </div> 
+            <div class="buttoncontainer">
+              <div class="button">
+                <a> <img (click)="onEnrol(student)" placement="bottom" ngbTooltip="add {{student.StudentMatric}} to this course" container="body" src="../../assets/image/enrolbtn.png"></a>
+              </div> 
+            </div>               
           </div>
-        </div>    
-      </a>
-    </div>
+        </div>
+        <div class="col-8 image-container">
+          <div class="matric">
+            <p> {{student.StudentMatric}}</p>
+          </div>
+          <div class="name">
+            <p>{{student.StudentName }}</p>
+          </div>
+          <div class="program">
+            <p> {{student.StudentProgram}}</p>
+          </div> 
+        </div>
+      </div>    
+    </a>
   </div>
 </div>
