@@ -10,7 +10,7 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
-import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireAuthModule} from '@angular/fire/auth';
 
 import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
@@ -35,11 +35,15 @@ import { LecturerComponent } from './lecturer/lecturer.component';
 import { LecturerprofileComponent } from './lecturer/lecturerprofile/lecturerprofile.component';
 import { LecturerallcourselistComponent } from './lecturer/lecturerallcourselist/lecturerallcourselist.component';
 
+
+import { AuthGuard } from './services/auth.guard';
+import { AuthService } from './services/auth.service';
 import { CourseService } from './services/course.service';
 import { LecturerService } from './services/lecturer.service';
 import { StudentService } from './services/student.service';
 import { LecturerallstudentlistComponent } from './lecturer/lecturerallstudentlist/lecturerallstudentlist.component';
 import { LecturerenrolledstudentlistComponent } from './lecturer/lecturerenrolledstudentlist/lecturerenrolledstudentlist.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 
@@ -61,6 +65,7 @@ import { LecturerenrolledstudentlistComponent } from './lecturer/lecturerenrolle
     StudentlistComponent,
     LecturerallstudentlistComponent,
     LecturerenrolledstudentlistComponent,
+    AdminComponent,
   ],
 
   imports: [
@@ -76,7 +81,7 @@ import { LecturerenrolledstudentlistComponent } from './lecturer/lecturerenrolle
     ToastrModule.forRoot(),
 
   ],
-  providers: [CourseService, LecturerService, StudentService],
+  providers: [AuthGuard, AuthService, CourseService, LecturerService, StudentService],
   bootstrap: [AppComponent]
 })
 

@@ -4,5 +4,10 @@ header{
   padding-left:10%;
   padding-right:10%;
   margin-bottom:20px;
+}
 
+img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%; 
 }

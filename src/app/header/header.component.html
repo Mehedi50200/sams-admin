@@ -5,8 +5,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+      <ul class="navbar-nav mr-auto" >
         <li class="nav-item active">
           <a class="nav-link" routerLink="/dashboard">Dashboard <span class="sr-only">(current)</span></a>
         </li>
@@ -20,6 +20,17 @@
           <a class="nav-link" routerLink="/student">Student</a>
         </li>
       </ul>
+      <div *ngFor="let adminProf of adminProfile">
+        <span class="navbar-text">
+          <a class="nav-link right"><img src= {{adminProf.userProfileImageUrl}}/></a>
+        </span>
+        <span class="navbar-text">
+          <a class="nav-link right">{{adminProf.userName}}</a>
+        </span>
+        <span class="navbar-text">
+          <a class="nav-link right" (click)="SignOut()">Log out</a>
+        </span>
+      </div>
     </div>
   </nav>
 </header>

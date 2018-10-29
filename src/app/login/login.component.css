@@ -1,44 +1,53 @@
 button{
 	border: solid .5px #36D1DC; 
-	background-color: transparent;
+	background: linear-gradient(to right, #36D1DC,#5B86E5);
 	border-radius: 20px;
-	color: #5B86E5;
+	color: white;
 	height: 35px;
 	text-align: center;
 	vertical-align: middle;
 }
 
 button:hover{
-	box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.05);
-}
-
-input[type=submit]{
-	border: none;
-	background: linear-gradient(to right, #36D1DC,#5B86E5);
+	box-shadow: 0px 4px 20px 5px rgba(30, 173, 240, 0.3);
 	color: white;
-	height: 35px;
-	text-align: center;
-	vertical-align: middle;
+	font-style: bold;
 }
 
-input[type=submit]:hover{
-	box-shadow: 2px 4px 8px 5px rgba(0, 0, 0, 0.1);
+
+button:disabled,
+button[disabled] {
+  background:rgba(0, 0, 0, .1) !important;
+  color: #ffffff !important;
+  border: 1px solid #D1D1D1 !important;
 }
+
+button:disabled,
+button[disabled] :hover{
+box-shadow: none;
+}
+
+input.ng-invalid.ng-dirty {
+  border: 1px solid red;
+}
+
 
 
 input[type=email]{
 	border: none;
-	color: white;
+	color: gray;
 	height: 35px;
 	text-align: center;	
 	vertical-align: middle;
+	border-radius: 20px;
 }
 input[type=password]{
 	border: none;
-	color: white;
+	color: gray;
 	height: 35px;
 	text-align: center;
 	vertical-align: middle;
+	border-radius: 20px;
 }
 
 
