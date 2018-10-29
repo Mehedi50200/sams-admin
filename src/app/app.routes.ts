@@ -10,8 +10,9 @@ import { LecturerenrolledstudentlistComponent } from './lecturer/lecturerenrolle
 
 
 export const appRoutes: Routes = [ 
-  { path: '', redirectTo: 'login', pathMatch: 'full'},
+ 
   { path: 'login', component: LoginComponent},
+  { path: '', redirectTo: 'login', pathMatch: 'full'},
   { path: 'dashboard', component: DashboardComponent, 
     canActivate: [AuthGuard]
   },
@@ -30,5 +31,5 @@ export const appRoutes: Routes = [
   { path: 'lecturer', component: LecturerComponent,
     canActivate: [AuthGuard]
   },
-  { path: '**', redirectTo: '' }
+  
 ]

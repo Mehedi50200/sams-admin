@@ -31,7 +31,7 @@ export class StudentlistComponent implements OnInit {
 
 
   onDelete(key: string) {
-    if (confirm('Are You Sure to Delete this Course') == true) {
+    if (confirm('Are You Sure to Delete this Student') == true) {
       this.studentService.deleteStudent(key);
       this.toastr.success('Student Deleted Successfully', 'Student Deleted');
     }
