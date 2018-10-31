@@ -32,8 +32,6 @@ export class StudentformComponent implements OnInit {
   onStudentSubmit(form?: NgForm)
   {   
     this.studentService.insertStudent(form.value);  
-  //  const file = this.selectedFiles.item(0);
-  //  this.startUpload(file);
    
     this.resetForm(form);
     this.toastr.success('New Student Added Successfully', 'Student Added');
@@ -59,13 +57,6 @@ export class StudentformComponent implements OnInit {
     this.toastr.success('Student Updated Successfully', 'Student Updated');
   }
 
-  /* image Upload */
-
-  /* selectFile(event) {
-      this.selectedFiles = event.target.files;
-    }
-    
-    */ 
   startUpload(event: FileList/*file:File*/) {
 
     const file = event.item(0);

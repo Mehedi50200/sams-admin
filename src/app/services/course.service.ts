@@ -22,6 +22,7 @@ export class CourseService {
       CourseCode: course.CourseCode,
       CourseName: course.CourseName,
       CourseCredit: course.CourseCredit,
+      Url: course.Url,
     });
   }
 

@@ -5,6 +5,7 @@
   .collapse{
     flex-basis: 300px;
     flex-grow: 10;
+    height: fit-content !important;
     height: 260px;
     margin: 10px;
     box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
@@ -111,4 +112,22 @@
 
   input.ng-invalid.ng-dirty {
     border: 1px solid red;
+  }
+
+  .imageurl{
+    display: none;
+  }
+  .uploadedImage img{
+    width:80px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .progressbar{
+    min-width: 300px;
+    height: 10px;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
   }
