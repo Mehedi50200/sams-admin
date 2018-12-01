@@ -79,6 +79,7 @@ export class LecturerprofileComponent implements OnInit {
       CourseCode : '',
       CourseName : '',
       CourseCredit: '',
+      Url: '',
       Day: '',
       Time: '',
     }

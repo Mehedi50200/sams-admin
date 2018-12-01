@@ -2,9 +2,7 @@
     padding: 0 !important;
     margin: 0 !important;
   }
-  .collapse{
-    flex-basis: 300px;
-    flex-grow: 10;
+  #collapsableStudentForm, #collapsableStudentEditForm{
     height: fit-content !important;
     margin: 10px;
     box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);

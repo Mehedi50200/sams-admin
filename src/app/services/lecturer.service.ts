@@ -58,6 +58,7 @@ export class LecturerService {
     this.assignedCourseList.update(course.CourseCode,{
       CourseName: course.CourseName,
       CourseCredit: course.CourseCredit,
+      Url: course.Url
     });
     this.assignedCourseList.update('/'+ course.CourseCode+'/Routine',{
       Day: course.Day,

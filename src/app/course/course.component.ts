@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
-class Course {
-    constructor(public course) { }
-}
-
 @Component({
   selector: 'app-course',
   templateUrl: './course.component.html', 

@@ -1,7 +1,7 @@
 <div class="main nopdding">
-  <div class="addwidget scene_element scene_element--fadeinright"
-       data-toggle="collapse" data-target="#collapsableForm"
-       aria-expanded="false" aria-controls="collapsableForm">
+  <div class="addwidget"
+       data-toggle="collapse" data-target="#collapsableAddForm"
+       aria-expanded="false" aria-controls="collapsableAddForm">
 
     <div class="row">
       <div class="col-4 addimage">
@@ -18,7 +18,7 @@
   </div>
   
    <!---------------------------------------- Add Form ------------------------------------------>
-  <div class="collapse scene_element scene_element--fadein" id="collapsableForm">
+  <div class="collapse scene_element scene_element--fadein" id="collapsableAddForm">
     <form #courseAddForm="ngForm" (ngSubmit)="onSubmit(courseAddForm)">
       <div class="form-group">
         <input type="hidden" class="form-control"
@@ -60,8 +60,8 @@
         </div>
         <div class="input-group-append">
           <button class="addbtn" type="submit" [disabled]="!courseAddForm.valid"
-                  data-toggle="collapse" data-target="#collapsableForm"
-                  aria-expanded="false" aria-controls="collapsableForm">Add Course</button>
+                  data-toggle="collapse" data-target="#collapsableAddForm"
+                  aria-expanded="false" aria-controls="collapsableAddForm">Add Course</button>
         </div>
       </div>
 
@@ -76,7 +76,7 @@
     </form>
   </div>
 
-  <div class="addwidget scene_element scene_element--fadeinright"
+  <div class="addwidget"
         data-toggle="collapse" data-target="#collapsableEditForm"
         aria-expanded="false" aria-controls="collapsableEditForm">
 
@@ -94,6 +94,7 @@
     </div>
   </div>
 
+   <!---------------------------------------- Edit Form ------------------------------------------>
   <div class="collapse scene_element scene_element--fadein" id="collapsableEditForm">
     <form #courseForm="ngForm" (ngSubmit)="onUpdate(courseForm)">
       <div class="form-group">

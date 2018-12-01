@@ -21,10 +21,16 @@
         </div>
 
         <div class="form-group">
-            <input type="text" class="form-control" 
-                name="CourseCredit" #name="ngModel" [(ngModel)]="lecturerService.selectedCourse.CourseCredit" 
-                placeholder="Course Credit" required>
-          </div>
+          <input type="text" class="form-control" 
+              name="CourseCredit" #name="ngModel" [(ngModel)]="lecturerService.selectedCourse.CourseCredit" 
+              placeholder="Course Credit" required>
+        </div>
+
+        <div class="form-group">
+          <input type="hidden" class="form-control" 
+              name="Url" #name="ngModel" [(ngModel)]="lecturerService.selectedCourse.Url" 
+              placeholder="Course Picture">
+        </div>
 
         <div class="form-group">
             <input type="text" class="form-control" name="Time" #name="ngModel" [(ngModel)]="lecturerService.selectedCourse.Time"
@@ -38,7 +44,7 @@
             <option value="Tuesday">Tuesday</option>
             <option value="Wednesday">Wednesday</option>
             <option value="Thursday">Thursday</option>
-            <option value="Frinday">Frinday</option>
+            <option value="Friday">Friday</option>
           </select>
         </div>
     

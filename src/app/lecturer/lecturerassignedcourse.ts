@@ -5,4 +5,5 @@ export class AssignedCourse {
   CourseCredit: string;
   Day: string;
   Time: string;
+  Url: string;
 }

@@ -1,4 +1,5 @@
-import { Routes, CanActivate } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard} from './services/auth.guard';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -32,4 +33,4 @@ export const appRoutes: Routes = [
     canActivate: [AuthGuard]
   },
   
-]
+];

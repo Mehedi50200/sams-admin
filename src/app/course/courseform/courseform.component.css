@@ -2,11 +2,8 @@
     padding: 0 !important;
     margin: 0 !important;
   }
-  .collapse{
-    flex-basis: 300px;
-    flex-grow: 10;
+  #collapsableEditForm, #collapsableAddForm{
     height: fit-content !important;
-    height: 260px;
     margin: 10px;
     box-shadow: -1px 1px 30px 5px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
