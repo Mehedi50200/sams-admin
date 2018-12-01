@@ -19,7 +19,7 @@
     
     <!---------------------------------------- Add Form ------------------------------------------>
 
-    <div class="collapse scene_element scene_element--fadein" id="collapsableStudentForm">
+    <div class="collapse" id="collapsableStudentForm">
       <form #studentAddForm="ngForm" (ngSubmit)="onStudentSubmit(studentAddForm)">
         <div class="form-group">
           <input type="hidden" class="form-control"
@@ -103,7 +103,7 @@
 
   <!---------------------------------------- Edit Form ------------------------------------------>
 
-    <div class="collapse scene_element scene_element--fadein" id="collapsableStudentEditForm">
+    <div class="collapse" id="collapsableStudentEditForm">
       <form #studentEditForm="ngForm" (ngSubmit)="onStudentUpdate(studentEditForm)">
         <div class="form-group">
           <input type="hidden" class="form-control"
