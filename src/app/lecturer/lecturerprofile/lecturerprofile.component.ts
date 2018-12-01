@@ -30,7 +30,7 @@ export class LecturerprofileComponent implements OnInit {
   
   
 
-  constructor(private route: ActivatedRoute, private lecturerService: LecturerService, private toastr: ToastrService) { }
+  constructor(public route: ActivatedRoute, public lecturerService: LecturerService, public toastr: ToastrService) { }
 
   ngOnInit() {
     this.routeSub = this.route.params.subscribe(params => {

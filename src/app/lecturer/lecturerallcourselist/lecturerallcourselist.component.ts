@@ -15,8 +15,8 @@ export class LecturerallcourselistComponent implements OnInit {
   
   courseList: Course[];
   userId: string;
-  private routeSub: any;
-  constructor(private route: ActivatedRoute, private courseService: CourseService, private lecturerService: LecturerService, private toastr: ToastrService) { }
+  public routeSub: any;
+  constructor(public route: ActivatedRoute, public courseService: CourseService, public lecturerService: LecturerService, public toastr: ToastrService) { }
 
   ngOnInit() {
 
@@ -55,6 +55,8 @@ export class LecturerallcourselistComponent implements OnInit {
       CourseName : '',
       CourseCredit: '',
       Url: '',
+      Day:'',
+      Time:'',
     }
   }
 

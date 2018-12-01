@@ -22,7 +22,7 @@ export class CourseformComponent implements OnInit {
   snapshot: Observable<any>;
   downloadURL: Observable<any>;
 
-  constructor(private courseService: CourseService, private toastr: ToastrService, private storage: AngularFireStorage, private db: AngularFireDatabase) { }
+  constructor(public courseService: CourseService, public toastr: ToastrService, public storage: AngularFireStorage, public db: AngularFireDatabase) { }
 
   
   ngOnInit() {
@@ -46,6 +46,8 @@ export class CourseformComponent implements OnInit {
       CourseName : '',
       CourseCredit: '',
       Url: '',
+      Day:'',
+      Time:'',
     }
   }
 

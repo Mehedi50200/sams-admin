@@ -24,7 +24,7 @@ export class StudentformComponent implements OnInit {
   snapshot: Observable<any>;
   downloadURL: Observable<any>;
 
-  constructor(private studentService: StudentService, private toastr: ToastrService, private storage: AngularFireStorage, private db: AngularFireDatabase) { }
+  constructor(public studentService: StudentService, public toastr: ToastrService, public storage: AngularFireStorage, public db: AngularFireDatabase) { }
 
   ngOnInit() {
   }

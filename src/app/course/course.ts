@@ -4,4 +4,6 @@ export class Course{
   CourseName: string;
   CourseCredit: string;
   Url: string;
+  Day: string;
+  Time: string;
 }
