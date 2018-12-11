@@ -2,8 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { appRoutes } from './app.routes';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { environment } from '../environments/environment';
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
@@ -70,7 +71,7 @@ import { AdminComponent } from './admin/admin.component';
     BrowserModule,
     BrowserAnimationsModule,
     NgbModule.forRoot(),
-    RouterModule.forRoot(appRoutes, {useHash: false}),
+    RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase, 'StudentAttendanceMonitoringSystemFrontend'),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
